@@ -32,7 +32,7 @@
                     <div class="form-group">
                         <div class="g-recaptcha" data-sitekey="your_site_key"></div>
                     </div> <br><br>
-                    <a class="boton btn btn-primary" style="display: flex;" href="index.html" role="button">Ingresar</a>
+                    <a class="boton btn btn-primary" style="display: flex;" href="<?php echo BASE_URL ?>producto" role="button">Ingresar</a>
                     <div class="text-center mt-3">
                         <a href="">¿Ha olvidado su contraseña?</a>
                     </div>
@@ -42,7 +42,7 @@
               <img src="logo.png" class="img-fluid rounded-circle" style="background-color: rgb(189, 189, 119); width: 200px;height: 200px;" alt="logo">
                 <h2>BIENVENIDO</h2>
                 <p class="text-center" >Registrarse tiene muchos beneficios: pagos más rápidos, posibilidad de agregar más de una dirección, realizar seguimiento a tus pedidos y mucho más.</p>
-                <a href="registrarse.html" class="btn btn-custom btn-block" style="background-color: #0a0808; color: #fff;">Registrarse</a>
+                <a href="<?php echo BASE_URL ?>registrarse" class="btn btn-custom btn-block" style="background-color: #0a0808; color: #fff;">Registrarse</a>
             </div>
         </div>
     </div>

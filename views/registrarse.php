@@ -72,7 +72,7 @@
                                 <label for="confirmPassword">Confirmar contraseña </label>
                                 <input type="password" class="form-control" id="confirmPassword" placeholder="Confirmar contraseña" required>
                             </div>
-                            <a class="btn btn-custom btn-block" style="background-color: greenyellow;" href="index.html">Registrarse</a>
+                            <a class="btn btn-custom btn-block" style="background-color: greenyellow;" href="<?php echo BASE_URL ?>registrarse">Registrarse</a>
                             <div class="text-center mt-3">
                                 <p class="text-danger">* Campos obligatorios</p>
                             </div>

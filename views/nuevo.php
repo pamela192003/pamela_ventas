@@ -30,8 +30,8 @@
               <div class="card-body">
                 <h5 class="card-title">BOTIN CON PLATAFORMA</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -43,8 +43,8 @@
               <div class="card-body">
                 <h5 class="card-title">BOTIN ELEGANTE</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -56,8 +56,8 @@
               <div class="card-body">
                 <h5 class="card-title">BOTIN CUERO</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -69,8 +69,8 @@
               <div class="card-body">
                 <h5 class="card-title">BOTIN PLATAFORMA</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -82,8 +82,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATO TRANSPARENTE</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -95,8 +95,8 @@
               <div class="card-body">
                 <h5 class="card-title">SANDALIAS CON TACO ALTO</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -108,8 +108,8 @@
               <div class="card-body">
                 <h5 class="card-title">TACO PARA BODA</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -121,8 +121,8 @@
               <div class="card-body">
                 <h5 class="card-title">TACO AGUJA</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -134,8 +134,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLA DEPORTIVA</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -147,8 +147,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLAS CON CORDONES STAPLE</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -160,8 +160,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLA VINTAGE</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -173,8 +173,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLA VINTAGE</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -186,8 +186,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLA PLATAFORMA</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -199,8 +199,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLA TERMICA INVIERNO</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -212,8 +212,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLA PIEL DE FELPA</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -225,8 +225,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLA DEPORTE</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -238,8 +238,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLA DEPORTE NIÑO</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -251,8 +251,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLAS PUMA</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -264,8 +264,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLA CONVERSE</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -277,8 +277,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLAS VELCRO</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -290,8 +290,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLAS CONVERSE MUJER</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto"class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -303,8 +303,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLA DEPORTE</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -316,8 +316,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLA CASUAL</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
@@ -329,8 +329,8 @@
               <div class="card-body">
                 <h5 class="card-title">ZAPATILLA LUCES</h5>
                 <div class="text-center">
-                  <a href="detalles_producto.html" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
-                  <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                  <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                  <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                 </div>
               </div>
             </div>
