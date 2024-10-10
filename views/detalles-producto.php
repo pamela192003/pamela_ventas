@@ -59,7 +59,7 @@
                                     <li>Color: BLANCO</li>
                                     <li>Precio Online (S/): S/. 249.90</li>
                                 </ul>
-                                <a href="<?php echo BASE_URL ?>factura_pago" class="btn btn-success">Pagar</a>
+                                <a href="<?php echo BASE_URL ?>factura-pago" class="btn btn-success">Pagar</a>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                     style="height: 350px;">
                   <div class="card-body">
                     <div class="text-center"><br><br>
-                      <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                      <a href="<?php echo BASE_URL ?>detalles-producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
                       <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                     </div>
                   </div>
@@ -94,7 +94,7 @@
                     style="height: 350px;">
                   <div class="card-body">
                     <div class="text-center"><br><br>
-                      <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                      <a href="<?php echo BASE_URL ?>detalles-producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
                       <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                     </div>
                   </div>
@@ -106,7 +106,7 @@
                     style="height: 350px;">
                   <div class="card-body">
                     <div class="text-center"><br><br>
-                      <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                      <a href="<?php echo BASE_URL ?>detalles-producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
                       <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                     </div>
                   </div>
@@ -118,7 +118,7 @@
                     style="height: 350px;">
                   <div class="card-body">
                     <div class="text-center"><br><br>
-                      <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                      <a href="<?php echo BASE_URL ?>detalles-producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
                       <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                     </div>
                   </div>
@@ -130,7 +130,7 @@
                     style="height: 350px;">
                   <div class="card-body">
                     <div class="text-center"><br><br>
-                      <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                      <a href="<?php echo BASE_URL ?>detalles-producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
                       <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                     </div>
                   </div>
@@ -142,7 +142,7 @@
                     style="height: 350px;">
                   <div class="card-body">
                     <div class="text-center"><br><br>
-                      <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                      <a href="<?php echo BASE_URL ?>detalles-producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
                       <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                     </div>
                   </div>
@@ -154,7 +154,7 @@
                     style="height: 350px;">
                   <div class="card-body">
                     <div class="text-center"><br><br>
-                      <a href="<?php echo BASE_URL ?>detalles_producto"class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                      <a href="<?php echo BASE_URL ?>detalles-producto"class="btn" style="background: #e3f2fd;">Ver Detalles</a>
                       <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                     </div>
                   </div>
@@ -166,7 +166,7 @@
                     style="height: 350px;">
                   <div class="card-body">
                     <div class="text-center"><br><br>
-                      <a href="<?php echo BASE_URL ?>detalles_producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
+                      <a href="<?php echo BASE_URL ?>detalles-producto" class="btn" style="background: #e3f2fd;">Ver Detalles</a>
                       <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                     </div>
                   </div>

@@ -74,7 +74,7 @@
                     <a href="https://www.pagoefectivo.la/pe/" target="_blank"><img class="col-3 m-2" src="https://paginasweb.pe/wp-content/uploads/2016/05/pagoefectivo.png" alt=""></a>
                 </div>
                 <div class="text-center d-grid gap-2 col-6 mx-auto">
-                    <a href="<?php echo BASE_URL ?>factura_pago" class="btn btn-success">Pagar</a>
+                    <a href="<?php echo BASE_URL ?>factura-pago" class="btn btn-success">Pagar</a>
                     <a href="<?php echo BASE_URL ?>producto"class="btn btn-primary">Seguir Comprando</a>
                 </div>
             </div>
