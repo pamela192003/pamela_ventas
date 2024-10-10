@@ -1,6 +1,6 @@
 <div class="footer">
 
-  <a class="btn btn-info" href="<?php echo BASE_URL ?>contactanos"role="button">CONTACTANOS</a>
+  <a class="btn btn-info" href="<?php echo BASE_URL ?>contacto"role="button">CONTACTANOS</a>
   <a class="btn btn-info" href="<?php echo BASE_URL ?>perfil"role="button">PERFIL</a>
   <a class="btn btn-info" href="<?php echo BASE_URL ?> sobre-nosotros"role="button">SOBRE NOSOTROS</a>
  <div class="text-center">
