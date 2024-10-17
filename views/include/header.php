@@ -14,6 +14,9 @@
             border-top: 1px solid #ddd;
             }
     </style>
+    <script>
+      const base_url = '<?php echo BASE_URL; ?>';
+    </script>
 </head>
 <body>
     <div class="container-fluid p-0 ">
