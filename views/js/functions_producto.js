@@ -15,14 +15,31 @@ async function registrar_producto(){
         //capturamos datos del formulario html
         const datos = new FormData(frmRegistrar);
         //enviar datos hacia el controlador
-        let respuesta = await fetch(base_url+'controller/Producto.php?tipo=registrar', {
+        let respuesta = await fetch(base_url+'controller/Producto.php?tipo=registrar', { //await es una promesa que si o si espera una respuesta
             method: 'POST',
             mode: 'cors',
-            cahe: 'no-cache',
+            cache: 'no-cache',
             body: datos
         });
-        console.log(respuesta);
+        json = await respuesta.json();
+        if (json.status) {
+            swal("Registro", json.mensaje, "success");
+        }else{
+            swal("Registro", json.mensaje, "error");
+        }
+
+        console.log(json);
     } catch (e) {
         console.log("Oops ocurrio un error"+e);
+    }
+}
+
+async function listar_categorias(){
+    try {
+            let respuesta = await fetch(base_url+'controller/Categoria.php?tipo=listar');
+
+            console.log(respuesta);
+    } catch (e) {
+        console.log("Error al cargar categorias"+e);
     }
 }

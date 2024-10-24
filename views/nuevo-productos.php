@@ -22,7 +22,7 @@
     </div>
     <div>
         <label for="">Categoria</label>
-        <input type="number" id="categoria" name="categoria" class="form-control" required>
+        <input type="number" id="categoria" name="idcategoria" class="form-control" required>
     </div>
     <div>
         <label for="">Imagen: </label>
@@ -30,9 +30,10 @@
     </div>
     <div>
         <label for="">Proveedor: </label>
-        <input type="number" id="proveedor" name="proveedor" class="form-control" required>
+        <input type="number" id="proveedor" name="idproveedor" class="form-control" required>
     </div>
     <button type="button" class="btn btn-success" onclick="registrar_producto();">Registrar</button>
 </form>
 
 <script src="<?php echo BASE_URL ?>views/js/functions_producto.js"></script>
+<script>listar_categorias();</script>
