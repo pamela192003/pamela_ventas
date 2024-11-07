@@ -13,9 +13,9 @@ if ($tipo=="registrar"){
         $detalle = $_POST['detalle'];
         $precio = $_POST['precio'];
         $stock = $_POST['stock'];
-        $categoria = $_POST['idcategoria'];
+        $categoria = $_POST['categoria'];
         $imagen = $_POST['imagen'];
-        $proveedor = $_POST['idproveedor'];
+        $proveedor = $_POST['proveedor'];
         if($codigo=="" || $nombre=="" || $detalle=="" || $precio=="" || $stock=="" || $categoria=="" ||  $imagen=="" || $proveedor==""){
             $arr_Respuesta = array('status'=>false,'mensaje'=>'Error, campos vacios'); //respuesta
 

@@ -21,7 +21,7 @@
         <input type="number" id="stock" name="stock" class="form-control" required>
     </div>
     <div>
-        <label for="">Categoria</label>
+        <label for="categoria">Categoria</label>
         <select name="categoria" id="categoria" class="form-control" required>
         <option>seleccione</option>
         </select>
@@ -31,11 +31,15 @@
         <input type="text" id="imagen" name="imagen" class="form-control" required>
     </div>
     <div>
-        <label for="">Proveedor: </label>
-        <input type="number" id="proveedor" name="idproveedor" class="form-control" required>
+    <label for="proveedor">proveedor</label>
+        <select id="proveedor" name="idproveedor" class="form-control" required>
+        <option>seleccione</option>
+        </select>
+
     </div>
     <button type="button" class="btn btn-success" onclick="registrar_producto();">Registrar</button>
 </form>
 
 <script src="<?php echo BASE_URL ?>views/js/functions_producto.js"></script>
 <script>listar_categorias();</script>
+<script>listar_proveedor();</script>
