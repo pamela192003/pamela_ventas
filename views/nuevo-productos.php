@@ -28,11 +28,11 @@
     </div>
     <div>
         <label for="">Imagen: </label>
-        <input type="text" id="imagen" name="imagen" class="form-control" required>
+        <input type="file" id="imagen" name="imagen" class="form-control" required>
     </div>
     <div>
     <label for="proveedor">proveedor</label>
-        <select id="proveedor" name="idproveedor" class="form-control" required>
+        <select id="proveedor" name="proveedor" class="form-control" required>
         <option>seleccione</option>
         </select>
 

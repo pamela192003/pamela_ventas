@@ -66,7 +66,7 @@ async function listar_proveedor() {
             let datos = json.contenido;
             let contenido_select = '<option value="">Seleccione</option>';
             datos.forEach(element => {
-                contenido_select += '<option value="' + element.rol + '">' + element.razon_social + '</option>';
+                contenido_select += '<option value="' + element.id + '">' + element.razon_social + '</option>';
                 /*$('#categoria').append($('<option />',{
                     text:${element.nombre},
                     value:${element.id}
