@@ -4,7 +4,7 @@ class vistaModelo{
 
     protected static function obtener_vista($vista){
         $palabras_permitidas =['usuarios','nuevo-usuario','usuario', 'producto','hombres','carrito','nuevo','contacto','detalles-producto',
-    'factura-pago','kids','login','perfil','registrarse','sobre-nosotros','nuevo-productos']; //carpetas de html
+    'factura-pago','kids','login','perfil','registrarse','sobre-nosotros','nuevo-productos','nueva-persona','nuevo-categoria']; //carpetas de html
         if(in_array($vista, $palabras_permitidas)){
             if (is_file("./views/".$vista.".php")) {  //busca si el archivo existe o no existe dentro de las vistas
                 $contenido = "./views/".$vista.".php";

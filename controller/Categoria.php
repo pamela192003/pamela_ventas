@@ -4,6 +4,21 @@ $tipo = $_REQUEST['tipo'];
 
 //instanciar la clase categoria model
 $objCategoria = new CategoriaModel();
+if ($tipo=="registrar") {
+
+if ($_POST) {
+    $nombre = $_POST['nombre'];
+    $detalle = $_POST['detalle'];
+    
+    if ($nombre=="" || $detalle=="") {
+        $arr_Respuesta = array('status'=>false,'mensaje'=>'error , los campos estan vacios');
+        } else {
+            $arr_Categorias = $objCategoria->registrarCategorias($nombre, $detalle);
+        }
+        echo json_encode($arr_Respuesta);
+    }
+}
+
 
 if ($tipo=="listar") {
     //respuesta
