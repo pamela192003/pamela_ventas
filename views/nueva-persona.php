@@ -1,6 +1,6 @@
 <h1 style="text-align: center;">Formulario de Registro de Persona</h1>
 <div>
-<form action="" id="frmRegistrarPersona">
+<form action="" id="insertarPersona">
     <div>
         <label for="nro_identidad">Número de Identidad:</label>
         <input type="text" id="nro_identidad" name="nro_identidad" class="form-control" required>
@@ -56,7 +56,7 @@
         <label for="fecha_reg">Fecha de Registro:</label>
         <input type="date" id="fecha_reg" name="fecha_reg" class="form-control" required>
     </div>
-    <button type="button" class="btn btn-success" onclick="registrar_persona();">Registrar</button>
+    <button type="button" class="btn btn-success" onclick="insertarPersona();">Registrar</button>
 </form>
 
 <script src="<?php echo BASE_URL;?>views/js/functions_persona.js"></script>
