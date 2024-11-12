@@ -6,7 +6,7 @@ async function insertarCategoria() {
         return;
     }
     try {
-        const datos = new FormData(frminsertar); 
+        const datos = new FormData(frmRegistrar); 
         let respuesta = await fetch(base_url + 'controller/Categoria.php?tipo=registrar', {
             method: 'POST',
             mode: 'cors',
