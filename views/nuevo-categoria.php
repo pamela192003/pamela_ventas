@@ -8,6 +8,6 @@
         <label for="">Detalle:</label>
         <input type="text" class="form-control" required id= "detalle" name="detalle">
     </div><br>
-    <button type="button" class="btn btn-info " onclick="insertarCategoria();">Registrar</button>
+    <button type="button" class="btn btn-info " onclick="registrarCategoria();">Registrar</button>
 </form>
-<script src="<?php echo BASE_URL;?>views/js/funtions_categoria.js"></script>
+<script src="<?php echo BASE_URL;?>views/js/functions-categoria.js"></script>
