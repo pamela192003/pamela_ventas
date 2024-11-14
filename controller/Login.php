@@ -27,7 +27,7 @@ if ($tipo=="iniciar_sesion") {
     }
     echo json_encode($arrResponse);
 }
-if ($tipo = "cerrar_sesion") {
+if ($tipo == "cerrar_sesion") {
     session_start();
     session_unset();
     session_destroy();
