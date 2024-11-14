@@ -46,6 +46,7 @@
                             <li class="nav-item" style="margin-left: 90px;">
                                 <a class="nav-link" href="<?php echo BASE_URL ?>kids"><h4>MUJERES</h4></a>
                             </li>
+                            <button type="button" class="btn btn-info " onclick="cerrar_sesion();">cerrar sesion</button>
                             </ul>
                  </div>
                 
@@ -72,7 +73,4 @@
                 </form>
               </div>
             </div>
-
-
-
           </nav>

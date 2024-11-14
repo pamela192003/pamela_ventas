@@ -14,25 +14,24 @@
           }
   </style>
 </head>
+<script> const base_url = '<?php echo BASE_URL; ?>';</script>
 <body>
       <div class="container login-container" style="max-width: 900px; margin: auto; padding: 40px 0;">
         <div class="row">
          
             <div class="col-md-6 login-form" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
                 <h2 class="text-center" style="margin-bottom: 30px;">INICIA SESIÓN</h2>
-                <form>
+                <form id="frm_iniciar_sesion">
                     <div class="form-group">
-                        <label for="email">Correo electrónico *</label>
-                        <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
+                        <label for="usuario">Usuario *</label>
+                        <input type="text" class="form-control" id="usuario" name="usuario"placeholder="usuario" required>
                     </div><br><br>
                     <div class="form-group">
                         <label for="password">Contraseña *</label>
-                        <input type="password" class="form-control" style="box-shadow: none; border-color: #007bff;" id="password" placeholder="Contraseña" required>
+                        <input type="password" class="form-control" style="box-shadow: none; border-color: #007bff;" id="password"name="password" placeholder="password" required>
                     </div>
-                    <div class="form-group">
-                        <div class="g-recaptcha" data-sitekey="your_site_key"></div>
-                    </div> <br><br>
-                    <a class="boton btn btn-primary" style="display: flex;" href="<?php echo BASE_URL ?>producto" role="button">Ingresar</a>
+                     <br><br>
+                    <button type="submit" class="boton btn btn-primary">Ingresar</button>
                     <div class="text-center mt-3">
                         <a href="">¿Ha olvidado su contraseña?</a>
                     </div>
@@ -50,3 +49,4 @@
     </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
