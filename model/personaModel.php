@@ -14,15 +14,5 @@ require_once "../librerias/conexion.php";
         return $sql;
          }
 
-//trabajador
-    public function obtener_trabajador(){
-        $arr_Respuesta = array();
-        $Respuesta = $this->conexion->query("SELECT*FROM persona WHERE rol = 'trabajador'");
-
-        while ($objeto = $Respuesta->fetch_Object()){
-            array_push($arr_Respuesta, $objeto);
-        }
-    return $arr_Respuesta;
-    }
  }
 ?>
