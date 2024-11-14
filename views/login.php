@@ -42,8 +42,10 @@
               <img src="logo.png" class="img-fluid rounded-circle" style="background-color: rgb(189, 189, 119); width: 200px;height: 200px;" alt="logo">
                 <h2>BIENVENIDO</h2>
                 <p class="text-center" >Registrarse tiene muchos beneficios: pagos más rápidos, posibilidad de agregar más de una dirección, realizar seguimiento a tus pedidos y mucho más.</p>
-                <a href="<?php echo BASE_URL ?>registrarse" class="btn btn-custom btn-block" style="background-color: #0a0808; color: #fff;">Registrarse</a>
+                <a href="<?php echo BASE_URL ?>registrarse" class="btn btn-custom btn-block" style="background-color: #0a0808; color: #fff;">Registrarse</a> <hr>
+                <a href="<?php echo BASE_URL ?>nuevo-productos" class="btn btn-custom btn-block" style="background-color: #f55cc4 ; color: #fff;">Administrador</a>
             </div>
+           
         </div>
     </div>
 
