@@ -1,5 +1,5 @@
 
-<form id="frmRegCompras" action="" class="form-control"></form>
+<form id="frmRegCompras"  class="form-control"></form>
 <div class="form-group">   
     <div class="campo-contenedor">
             <label for="producto" class="etiqueta-flotante">producto:</label>
