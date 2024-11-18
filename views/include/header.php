@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
     <style>
       .footer {
             background-color: peachpuff;
@@ -46,7 +47,8 @@
                             <li class="nav-item" style="margin-left: 90px;">
                                 <a class="nav-link" href="<?php echo BASE_URL ?>kids"><h4>MUJERES</h4></a>
                             </li>
-                            <button type="button" class="btn btn-info " onclick="cerrar_sesion();">cerrar sesion</button>
+                            <button type="button" class="btn btn-info" onclick="cerrar_sesion();">cerrar sesion</button>
+                            <button type="button" class="btn btn-info" onclick="cerrar_sesion();">cerrar sesion</button>
                             </ul>
                  </div>
                 
