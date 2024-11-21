@@ -38,7 +38,8 @@ if ($tipo=="listar") {
             $arr_Categorias[$i]->options = $opciones;
         }
     $arr_Respuesta['status'] = true;
-    $arr_Respuesta['contenido'] = $arr_Categorias;
+    $arr_Respuesta['contenido'] = 
+    $arr_Categorias;
  }
     echo json_encode($arr_Respuesta);
 }

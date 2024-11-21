@@ -1,3 +1,36 @@
+async function listar_productos() {
+    try {
+        let respuesta = await fetch(base_url+'controller/Producto.php?tipo=listar');
+        let json = await respuesta.json();
+        if (json.status) {
+            let datos = json.contenido;
+            let cont = 0;
+            datos.forEach(item=>{
+                let nueva_fila = document.createElement("tr");
+                nueva_fila.id = "fila"+item.id; // id anuevo asignado-------------id de la BD
+                cont+=1;
+                nueva_fila.innerHTML = `
+                <th>${cont}</th> 
+                <td>${item.codigo}</td>
+                <td>${item.nombre}</td>
+                <td>${item.stock}</td>
+                <td>${item.categoria.nombre}</td>
+                <td>${item.proveedor.razon_social}</td>
+                <td><button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editarModal">Editar</button>
+                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#eliminarModal">Eliminar</button></td>
+        `;
+        document.querySelector('#tbl_producto').appendChild(nueva_fila);
+            });
+        }
+        console.log(json);
+    } catch (error) {
+        console.log("Oops salio un error "+error);
+    }
+}
+if (document.querySelector('#tbl_producto')) {
+    listar_productos();
+}
+
 async function registrar_producto(){
     let codigo = document.getElementById('codigo').values;
     let nombre = document.querySelector('#nombre').value;
@@ -60,7 +93,7 @@ async function listar_categorias(){
 
 async function listar_proveedor() {
     try {
-        let respuesta = await fetch(base_url+'controller/Proveedor.php?tipo=listar');
+        let respuesta = await fetch(base_url+'controller/persona.php?tipo=listar');
         json = await respuesta.json();
         if (json.status) {
             let datos = json.contenido;
