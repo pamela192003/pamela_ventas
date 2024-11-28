@@ -23,9 +23,9 @@ if ($tipo=="listar") {
             $r_proveedor = $objPersona->obtener_proveedor_id($id_proveedor);
             $arr_Productos[$i]->proveedor=$r_proveedor;
 
-            $id_categoria = $arr_Productos[$i]->id;
-            $categoria = $arr_Productos[$i]->nombre;
-            $opciones = '';
+            $id_producto = $arr_Productos[$i]->id;
+            $nombre = $arr_Productos[$i]->nombre;
+            $opciones = '<a href="'.BASE_URL.'editar-producto/'.$id_producto.'">Editar</a><button onlick="eliminar_producto('.$id_producto.')">Eliminar</button>';
             $arr_Productos[$i]->options = $opciones;
         }
     $arr_Respuesta['status'] = true;
@@ -80,13 +80,23 @@ if ($tipo=="registrar"){
     }
 }
 
+if ($tipo == "ver") {
+    //print_r($_POST);
+    $id_producto = $_POST['id_producto'];
+    $arr_Respuesta = $objProducto->verProducto($id_producto);
+   // print_r($arr_Respuesta);
+   if (empty($arr_Respuesta)) {
+    $response = array('status' => false, 'mensaje'=>"Error, no hay informacion");
+   }else {
+    $response = array('status' => true, 'mensaje'=>"datos encontrados",'contenido'=> $arr_Respuesta);
+   }
+   echo json_encode($response);
+}
 
-
-
-if ($tipo=="ver") {
+if ($tipo=="actualizar") {
     # code...
 }
-if ($tipo=="actualizar") {
+if ($tipo=="eliminar") {
     # code...
 }
 ?>

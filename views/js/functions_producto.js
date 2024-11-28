@@ -16,8 +16,7 @@ async function listar_productos() {
                 <td>${item.stock}</td>
                 <td>${item.categoria.nombre}</td>
                 <td>${item.proveedor.razon_social}</td>
-                <td><button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editarModal">Editar</button>
-                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#eliminarModal">Eliminar</button></td>
+                <td>${item.options}</td>
         `;
         document.querySelector('#tbl_producto').appendChild(nueva_fila);
             });
@@ -111,5 +110,34 @@ async function listar_proveedor() {
         console.log(respuesta);
     } catch (e) {
         console.log("Error  al cargar categorias " + e);
+    }
+}
+
+async function ver_producto(id) {
+    const formData = new FormData();
+    formData.append('id_producto',id);
+    try {
+        let respuesta = await fetch(base_url+'controller/Producto.php?tipo=ver', {
+            method:"POST",
+            mode: 'cors',
+            cache: 'no-cache',
+            body: formData
+        });
+        json = await respuesta.json();
+        if (json.status) {
+            document.querySelector('#codigo').value = json.contenido.codigo;
+            document.querySelector('#nombre').value = json.contenido.nombre;
+            document.querySelector('#detalle').value = json.contenido.detalle;
+            document.querySelector('#precio').value = json.contenido.precio;
+            document.querySelector('#categoria').value = json.contenido.categoria;
+            document.querySelector('#imagen').value = json.contenido.imagen;
+            document.querySelector('#proveedor').value = json.contenido.proveedor;
+        }else{
+            window.location = base_url+"productos";
+        }
+
+        console.log(json);
+    } catch (error) {
+        console.log("Oops ocurrio un error "+error);
     }
 }

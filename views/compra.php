@@ -3,14 +3,16 @@
         <thead class="table-dark text-center">
             <tr>
                 <th>Nro</th>
-                <th>Nombre</th>
-                <th>Detalle</th>
+                <th>producto</th>
+                <th>cantidad</th>
+                <th>precio</th>
+                <th>trabajador</th>
                 <th >Acciones</th>
             </tr>
         </thead>
-        <tbody id="tbl_categoria" class="text-center">
-         
+        <tbody id="tbl_compras" class="text-center">
+            
         </tbody>
     </table>
 </div>
-<script src="<?php echo BASE_URL ?>views/js/functions-categoria.js"></script>
+<script src="<?php echo BASE_URL?>views/js/functions_compras.js"></script>
