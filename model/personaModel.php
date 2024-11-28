@@ -41,5 +41,14 @@ require_once "../librerias/conexion.php";
             $objeto = $respuesta->fetch_object();
             return $objeto;
         }
+        public function obtenerPersona(){
+            $arrRespuesta = array();
+            $respuesta = $this->conexion->query("SELECT * FROM persona");
+            while ($objeto = $respuesta->fetch_object()) {
+                array_push($arrRespuesta,$objeto);
+                
+            }
+            return $arrRespuesta;
+        }
  }
 ?>
