@@ -49,7 +49,7 @@
 <script>listar_categorias();</script>
 <script>listar_proveedor();</script>
 <script>
-    //http://localhost/pamela_ventas/editar-producto/1
+    //http://localhost/pamela_ventas/editar-persona/1
     const id_p=<?php $pagina= explode("/", $_GET['views']); echo $pagina['1'] ;?>; //captura el link
     ver_persona(id_p);
 </script>

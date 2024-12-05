@@ -34,7 +34,6 @@ if ($tipo=="listar") {
     echo json_encode($arr_Respuesta);
 }
 
-
 if ($tipo=="registrar"){
     /*print_r($_POST);
     echo $_FILES['imagen']['name'];*/
@@ -44,15 +43,13 @@ if ($tipo=="registrar"){
     $tipoArchivo = strtolower(pathinfo($_FILES["imagen"]["name"], PATHINFO_EXTENSION));
 
    if ($_POST) {
-        $codigo = $_POST['codigo'];
+        $id_producto = $_POST['id_producto'];
         $nombre = $_POST['nombre'];
         $detalle = $_POST['detalle'];
         $precio = $_POST['precio'];
-        $stock = $_POST['stock'];
         $categoria = $_POST['categoria'];
-        $imagen = 'imagen';
         $proveedor = $_POST['proveedor'];
-        if($codigo=="" || $nombre=="" || $detalle=="" || $precio=="" || $stock=="" || $categoria=="" ||  $imagen=="" || $proveedor==""){
+        if($nombre=="" || $detalle=="" || $precio=="" || $categoria=="" ||  $imagen=="" || $proveedor==""){
             $arr_Respuesta = array('status'=>false,'mensaje'=>'Error, campos vacios'); //respuesta
 
         }else {
@@ -92,10 +89,33 @@ if ($tipo == "ver") {
    echo json_encode($response);
 }
 
-if ($tipo=="actualizar") {
-    # code...
-}
-if ($tipo=="eliminar") {
-    # code...
+if($tipo == "actualizar") {
+    //print_r($_POST);
+    //print_r($_FILES['imagen']['tmp_name']);
+    $id_producto = $_POST['id_producto'];
+    $img = $_POST['img'];
+    $nombre = $_POST['nombre'];
+    $detalle = $_POST['detalle'];
+    $precio = $_POST['precio'];
+    $categoria = $_POST['categoria'];
+    $proveedor = $_POST['proveedor'];
+    if ($nombre == "" || $detalle == "" || $precio == "" || $categoria == "" || $proveedor == "") {
+        $arr_Respuesta = array('status' => false, 'mensaje' => 'Error, campos vacios'); //respuesta
+
+    } else {
+        $arrProducto = $objProducto->actualizarProducto($id_producto, $nombre, $detalle, $precio, $categoria, $proveedor);
+        if ($arrProducto->p_id > 0) {
+            $arr_Respuesta = array('status' => true, 'mensaje' => 'actualizado correctamente');
+            if ($_FILES['imagen']['tmp_name']!="") {
+                unlink('../assets/img_productos/'.$img);
+            }
+            if (move_uploaded_file($archivo, $destino . '' . $nombre)) {
+
+        } else {
+            $arr_Respuesta = array('status' => false, 'mensaje' => 'Error al actualizar producto');
+        }
+        }
+
+    }
 }
 ?>

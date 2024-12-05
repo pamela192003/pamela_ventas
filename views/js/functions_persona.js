@@ -59,7 +59,10 @@ async function listar_personas() {
                 <td>${item.cod_postal}</td>
                 <td>${item.direccion}</td>
                 <td>${item.rol}</td>
-                <td>${item.options}</td>
+                <td>
+                    <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
+                </td>
         `;
         document.querySelector('#tbl_persona').appendChild(nueva_fila);
             });

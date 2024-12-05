@@ -1,8 +1,10 @@
 <h1 style="text-align: center;">Formulario de editar producto.</h1>
 <div>
 <form action="" class="from-control" id="frmRegistrar">
+    <input type="hidden" name="id_producto" id="id_producto">
+    <input type="hidden" name="img" id="img">
         <label for="">Codigo: </label>
-        <input type="text" id="codigo" name="codigo" class="form-control" required>
+        <input type="text" id="codigo" name="codigo" class="form-control" required  disabled>
     </div>
     <div>
         <label for="">Nombre: </label>

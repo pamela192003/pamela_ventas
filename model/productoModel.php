@@ -38,6 +38,11 @@ class ProductoModel{
         $sql = $sql->fetch_object();
         return $sql;
     }
+    public function actualizar_producto($id, $nombre, $detalle, $precio, $categoria, $fecha, $proveedor){
+        $sql = $this->conexion->query("CALL actualizarProducto()");
+        $sql = $sql->fetch_object();
+        return $sql;
+    }
 
 }
 
