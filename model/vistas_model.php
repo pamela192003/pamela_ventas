@@ -6,9 +6,9 @@ class vistaModelo{
         $palabras_permitidas =['usuarios','nuevo-usuario','usuario', 'inicio','hombres','carrito','nuevo','contacto','detalles-producto',
     'factura-pago','kids','login','perfil','registrarse','sobre-nosotros','nuevo-productos','nueva-persona','nuevo-categoria','nuevo-compras','productos','categoria','compra','editar-producto',
 'editar-persona']; //carpetas de html
-   /* if (!isset($_SESSION['sesion_ventas_id'])) {
+   if (!isset($_SESSION['sesion_ventas_id'])) {
         return "login";
-    }*/
+    }
     if(in_array($vista, $palabras_permitidas)){
             if (is_file("./views/".$vista.".php")) {  //busca si el archivo existe o no existe dentro de las vistas
                 $contenido = "./views/".$vista.".php";
