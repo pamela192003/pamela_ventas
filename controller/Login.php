@@ -5,7 +5,7 @@ $objPersona = new PersonaModel();
 $tipo = $_GET['tipo'];
 
 if ($tipo=="iniciar_sesion") {
-    //print_r($_POST);
+    print_r($_POST);
     $usuario = trim($_POST['usuario']);
     $password = trim($_POST['password']);
     $arrResponse = array('status'=>false, 'msg'=>'');
@@ -25,7 +25,7 @@ if ($tipo=="iniciar_sesion") {
             $arrResponse = array('status'=>false, 'msg'=>'Error, Contraseña Incorrecta');
         }
     }
-    echo json_encode($arrResponse);
+    //echo json_encode($arrResponse);
 }
 if ($tipo == "cerrar_sesion") {
     session_start();

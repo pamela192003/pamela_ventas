@@ -9,7 +9,7 @@ async function iniciar_sesion() {
         //capturamos datos del formulario html
         const datos = new FormData(frm_iniciar_sesion);
         //enviar datos hacia el controlador
-        let respuesta = await fetch(base_url+'controller/Login.php?tipo=iniciar_sesion'); { //await es una promesa que si o si espera una respuesta
+        let respuesta = await fetch(base_url+'controller/Login.php?tipo=iniciar_sesion', { //await es una promesa que si o si espera una respuesta
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
@@ -18,7 +18,7 @@ async function iniciar_sesion() {
         json = await respuesta.json();
         if (json.status) {
             //swal("Iniciar Sesion", json.mensaje, "success");
-            location.replace(base_url+"inicio")
+            //location.replace(base_url+"inicio")
         }else{
             swal("Iniciar Sesion", json.mensaje, "error");
         }

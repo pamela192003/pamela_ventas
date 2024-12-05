@@ -40,7 +40,7 @@ async function registrarPersona(){
 }
 async function listar_personas() {
     try {
-        let respuesta = await fetch(base_url+'controller/Persona.php?tipo=listar_p');
+        let respuesta = await fetch(base_url+'controller/persona.php?tipo=listar_p');
         let json = await respuesta.json();
         if (json.status) {
             let datos = json.contenido;
@@ -59,10 +59,7 @@ async function listar_personas() {
                 <td>${item.cod_postal}</td>
                 <td>${item.direccion}</td>
                 <td>${item.rol}</td>
-                <td>
-                    <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
-                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
-                </td>
+                <td>${item.options}</td>
         `;
         document.querySelector('#tbl_persona').appendChild(nueva_fila);
             });

@@ -8,7 +8,7 @@ const BD_NAME = '';
 const BD_CHARSET = '';
 
 // ingresar link del proyecto
-const BASE_URL = 'http://localhost/pamela_ventas/';
+const BASE_URL = 'https://pamela.dpweb2024.com/';
 
 
 ?>
