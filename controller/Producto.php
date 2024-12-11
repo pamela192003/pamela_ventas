@@ -55,7 +55,7 @@ if ($tipo == "registrar") {
             $destino = '../assets/img_productos/';
             $tipoArchivo = strtolower(pathinfo($_FILES["imagen"]["name"], PATHINFO_EXTENSION));
 
-            $arrProducto = $objProducto->registrarProducto($codigo, $nombre, $detalle, $precio, $stock, $categoria, $imagen, $proveedor, $tipoArchivo);
+            $arrProducto = $objProducto->registrarProducto($codigo, $nombre, $detalle, $precio, $categoria, $proveedor, $tipoArchivo);
             if ($arrProducto->id_n > 0) {
                 $newid = $arrProducto->id_n;
                 $arr_Respuesta = array('status' => true, 'mensaje' => 'Registro Exitoso');
