@@ -161,19 +161,17 @@ if ($tipo == "actualizar") {
     echo json_encode($arr_Respuesta);
 }
 
-if($tipo=="eliminar"){
-    
-    if ($_POST){
+if ($tipo == "eliminar") {
+    //print_r($_POST);
     $id_persona = $_POST['id_persona'];
-    $arr_Respuesta = $objPersona->eliminarPersona($id_persona);
+    $arr_Respuesta = $objPersona->eliminar_persona($id_persona);
     //print_r($arr_Respuesta);
     if (empty($arr_Respuesta)) {
-        $response = array('status'=> false);
-    }else {
-        $response = array('status'=> true);
+        $response = array('status' => false);
+    } else {
+        $response = array('status' => true);
     }
     echo json_encode($response);
-  }
 }
 
 ?>

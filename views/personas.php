@@ -15,7 +15,17 @@
             </tr>
         </thead>
         <tbody id="tbl_persona" class="text-center">
-            
+            <!--<tr>
+               <th>Nro</th>
+                <th>76543211</th>
+                <th>paola</th>
+                <th>999999999</th>
+                <th>pao@gmail.com</th>
+                <th>razu</th>
+                <th>5555</th>
+                <th>Arriba en el cerro</th>
+                <th>nc</th>
+            </tr> -->
         </tbody>
     </table>
 </div>

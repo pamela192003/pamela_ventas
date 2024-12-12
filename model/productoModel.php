@@ -39,12 +39,12 @@ class ProductoModel{
         $sql = $sql->fetch_object();
         return $sql;
     }
-    public function actualizar_producto($id, $nombre, $detalle, $precio, $categoria, $proveedor){
-        $sql = $this->conexion->query("CALL actualizarProducto('{$id}', '{$nombre}', '{$detalle}', '{$precio}','{$categoria}', '{$proveedor},)");
+    public function actualizarProducto($id, $nombre, $detalle, $precio, $categoria, $proveedor){
+        $sql = $this->conexion->query("CALL actualizarProducto('{$id}','{$nombre}','{$detalle}','{$precio}','{$categoria}','{$proveedor}')");
         $sql = $sql->fetch_object();
         return $sql;
     }
-    public function eliminar_producto($id){
+    public function eliminarProducto($id){
         $sql = $this->conexion->query("CALL eliminarProducto('{$id}')");
         $sql = $sql->fetch_object();
         return $sql;

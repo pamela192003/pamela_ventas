@@ -69,11 +69,10 @@ require_once "../librerias/conexion.php";
             return $sql;
         }
         
-        public function eliminarPersona($id){
+        public function eliminar_persona($id){
             $sql = $this->conexion->query("CALL eliminarPersona('{$id}')");
             $sql = $sql->fetch_object();
-            return$sql;
-        
+            return $sql;
         }
         
  }

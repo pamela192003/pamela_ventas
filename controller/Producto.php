@@ -102,10 +102,10 @@ if ($tipo == "ver") {
    echo json_encode($response);
 }
 
-if ($tipo == "actualizar") {
+if($tipo == "actualizar") {
     //print_r($_POST);
     //print_r($_FILES['imagen']['tmp_name']);
-
+    if ($_POST) {
     $id_producto = $_POST['id_producto'];
     $img = $_POST['img'];
     $nombre = $_POST['nombre'];
@@ -114,8 +114,8 @@ if ($tipo == "actualizar") {
     $categoria = $_POST['categoria'];
     $proveedor = $_POST['proveedor'];
     if ($nombre == "" || $detalle == "" || $precio == "" || $categoria == "" || $proveedor == "") {
-        //repuesta
-        $arr_Respuesta = array('status' => false, 'mensaje' => 'Error, campos vacíos');
+        $arr_Respuesta = array('status' => false, 'mensaje' => 'Error, campos vacios'); //respuesta
+
     } else {
         $arrProducto = $objProducto->actualizarProducto($id_producto, $nombre, $detalle, $precio, $categoria, $proveedor);
         if ($arrProducto->p_id > 0) {
@@ -134,20 +134,22 @@ if ($tipo == "actualizar") {
         } else {
             $arr_Respuesta = array('status' => false, 'mensaje' => 'Error al actualizar producto');
         }
+        echo json_encode($arr_Respuesta);
     }
-    echo json_encode($arr_Respuesta);
 }
-    if ($tipo=="eliminar") {
-        $id_producto = $_POST['id_producto'];
-        $arr_Respuesta = $objProducto->eliminar_producto($id_producto);
-        //print_r($arr_Respuesta);
-        if (empty($arr_Respuesta)) {
-            $response = array('status'=> false);
-        }else{
-            $response = array('status'=> true);
-        }
-        echo json_encode($response);
-    
+}
+
+if ($tipo == "eliminar") {
+    //print_r($_POST);
+    $id_producto = $_POST['id_producto'];
+    $arr_Respuesta = $objProducto->eliminarProducto($id_producto);
+    //print_r($arr_Respuesta);
+    if (empty($arr_Respuesta)) {
+        $response = array('status' => false);
+    } else {
+        $response = array('status' => true);
     }
+    echo json_encode($response);
+}
     
 ?>

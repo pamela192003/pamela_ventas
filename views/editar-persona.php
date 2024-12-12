@@ -39,8 +39,13 @@
         <input type="text" id="direccion" name="direccion" class="form-control" required>
     </div>
     <div>
-        <label for="">Rol: </label>
-        <input type="text" class="form-control" required id="rol" name="rol">
+    <label for="rol">Rol:</label>
+    <select id="rol" name="rol" class="form-control" required>
+        <option value="" disabled selected>Seleccione un rol</option>
+        <option value="proveedor">Proveedor</option>
+        <option value="trabajador">Trabajador</option>
+        <option value="trabajador">Adimistrador</option>
+    </select>
     </div>
     <button type="button" class="btn btn-success" onclick="actualizarPersona()">Actualizar</button>
 </form>

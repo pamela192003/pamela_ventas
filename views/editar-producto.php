@@ -1,10 +1,10 @@
 <h1 style="text-align: center;">Formulario de editar producto.</h1>
 <div>
-<form action="" class="from-control" id="frmRegistrar">
+<form action="" class="from-control" id="frmActualizar">
     <input type="hidden" name="id_producto" id="id_producto">
     <input type="hidden" name="img" id="img">
-        <label for="">Codigo: </label>
-        <input type="text" id="codigo" name="codigo" class="form-control" required  disabled>
+    <label for="">Codigo: </label>
+    <input type="text" id="codigo" name="codigo" class="form-control" disabled>
     </div>
     <div>
         <label for="">Nombre: </label>
@@ -35,7 +35,7 @@
         </select>
 
     </div>
-    <button type="button" class="btn btn-success" onclick="registrar_producto();">Registrar</button>
+    <button type="button" class="mb-3 btn btn-outline-info" onclick="actualizar_producto();"><i class="bi bi-check-circle"></i>Actualizar</button>
 </form>
 
 <script src="<?php echo BASE_URL ?>views/js/functions_producto.js"></script>

@@ -132,56 +132,40 @@ async function actualizarPersona() {
     }
 }
 
-async function eliminarPersona(id) {
-    swal({
-        title: "Confirmar eliminación",
-        text: "¿Estás seguro de que deseas eliminar este producto? Esta acción no se puede deshacer.",
+async function eliminar_persona(id) {
+    swal ({
+        title: "¿Realmente desea eliminar el usuario?",
+        text: "",
         icon: "warning",
-        buttons: {
-            cancel: {
-                text: "Cancelar",
-                value: null,
-                visible: true,
-                className: "btn btn-secondary",
-                closeModal: true,
-            },
-            confirm: {
-                text: "Eliminar",
-                value: true,
-                visible: true,
-                className: "btn btn-danger",
-                closeModal: false,
-            }
-        },
-        dangerMode: true,
-    }).then((willDelete) => {
+        buttons: true,
+        dangerMode: true
+    }).then((willDelete)=>{
         if (willDelete) {
-            fnt_eliminar(id)
-                
-        }
-          
-    });
-}
+            fnt_eliminar(id);
 
+        }
+    })
+}
 async function fnt_eliminar(id) {
     const formData = new FormData();
-    formData.append('id_persona',id);
-    try{
-        let respuesta = await fetch(base_url+'controller/persona.php?tipo=eliminar',{
-            method: 'POST',
-            mode: 'cors',
-            cache: 'no-cache',
-            body: formData
-        });
-        json = await respuesta.json();
-        if(json.status){
-            swal("Eliminado","Producto eliminado correctamente","success");
-            document.querySelector('#fila'+id).remove();
-        }else{
-            swal("Eliminar","error al eliminar","warning");
-        }
-    } catch (e) {
-        console.log("ocurrio error" + e);
+    formData.append('id_persona',
+        id);
+        try {
+            let respuesta = await fetch(base_url + 'controller/Persona.php?tipo=eliminar',{
+                 method: 'POST',
+                 mode: 'cors',
+                 cache: 'no-cache',
+                 body: formData
         
-    }
+            });
+            json = await respuesta.json();
+            if (json.status) {
+                swal("Eliminar", "eliminado correctamente", "success");
+                document.querySelector('#fila'+id).remove();
+            }else{
+                swal('Eliminar', 'Error al eliminar persona', 'warning');
+            }
+        } catch (e) {
+            console.log("ocurrio un error" + e);
+        }
 }
