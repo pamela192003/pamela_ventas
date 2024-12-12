@@ -100,7 +100,8 @@ if ($tipo == "listar_p") {
             $direccion =  $arrPersona[$i]->direccion;
             $rol =  $arrPersona[$i]->rol;
 
-            $opciones = '';
+            $opciones = ' <a href="'.BASE_URL.'editar-persona/'.$id_persona.'"><i class="fas fa-edit btn btn-success btn-sm"></i></a>
+                 <button onclick="eliminar_persona('.$id_persona.');"class="btn btn-warning btn-sm"><i class="fas fa-trash-alt"></i></button>';
             $arrPersona[$i]->options = $opciones;
         }
         $arr_Respuesta['status'] = true;
@@ -109,5 +110,70 @@ if ($tipo == "listar_p") {
     echo json_encode($arr_Respuesta); //convertir en formato -- 
 }
 
+
+
+//EDITAR
+if($tipo == "ver"){
+    //print_r($_POST);
+    $id_persona = $_POST['id_persona'];
+    $arr_Respuesta = $objPersona->verPersona($id_persona);
+    //print_r($arr_Respuesta);
+    if (empty($arr_Respuesta)) {
+        $response = array('status'=> false,'mensaje'=>"Error, no hay informacion");
+    }else {
+        $response = array('status'=> true,'mensaje'=>"Datos encontrados",'contenido'=>$arr_Respuesta);
+    }
+    echo json_encode($response);
+
+}
+
+
+// para actualizar
+
+if ($tipo == "actualizar") {
+    // Obtener los datos del formulario
+    $id_persona = $_POST['id_persona'];
+    $nro_identidad = $_POST['nro_identidad'];
+    $razon_social = $_POST['razon_social'];
+    $telefono = $_POST['telefono'];
+    $correo = $_POST['correo'];
+    $departamento = $_POST['departamento'];
+    $provincia = $_POST['provincia'];
+    $distrito = $_POST['distrito'];
+    $cod_postal = $_POST['cod_postal'];
+    $direccion = $_POST['direccion'];
+    $rol = $_POST['rol'];
+
+    if ($id_persona == "" || $nro_identidad == "" || $razon_social == "" || $telefono == "" || $correo == "" || $departamento == "" || $provincia == "" 
+    || $distrito == "" || $cod_postal == "" || $direccion == "" || $rol == "") {
+        $arr_Respuesta = array('status' => false, 'mensaje' => 'Error, campos vacios'); //respuesta
+
+    } else {
+        $arrPersona = $objPersona->actualizarPersona($id_persona, $nro_identidad, $razon_social, $telefono, $correo, $departamento, $provincia,
+    $distrito, $cod_postal, $direccion, $rol);
+        if ($arrPersona->p_id > 0) {
+            $arr_Respuesta = array('status' => true, 'mensaje' => 'Actualizado Correctamente');
+
+        } else {
+            $arr_Respuesta = array('status' => false, 'mensaje' => 'Error al actualizar PERSONA');
+        }
+    }
+    echo json_encode($arr_Respuesta);
+}
+
+if($tipo=="eliminar"){
+    
+    if ($_POST){
+    $id_persona = $_POST['id_persona'];
+    $arr_Respuesta = $objPersona->eliminarPersona($id_persona);
+    //print_r($arr_Respuesta);
+    if (empty($arr_Respuesta)) {
+        $response = array('status'=> false);
+    }else {
+        $response = array('status'=> true);
+    }
+    echo json_encode($response);
+  }
+}
 
 ?>

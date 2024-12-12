@@ -59,10 +59,7 @@ async function listar_personas() {
                 <td>${item.cod_postal}</td>
                 <td>${item.direccion}</td>
                 <td>${item.rol}</td>
-                <td>
-                    <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
-                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
-                </td>
+                <td>${item.options}</td>
         `;
         document.querySelector('#tbl_persona').appendChild(nueva_fila);
             });
@@ -78,4 +75,113 @@ async function listar_personas() {
 
 if (document.querySelector('#tbl_persona')) {
     listar_personas();
+}
+
+
+// EDITAR
+async function ver_persona(id) {
+    const formData = new FormData();
+    formData.append('id_persona', id); 
+    try {
+        let respuesta = await fetch(base_url+'controller/Persona.php?tipo=ver', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: formData
+        });
+        json = await respuesta.json();
+        if (json.status) {
+            document.querySelector('#id_persona').value = json.contenido.id;
+            document.querySelector('#nro_identidad').value = json.contenido.nro_identidad;
+            document.querySelector('#razon_social').value = json.contenido.razon_social;
+            document.querySelector('#telefono').value = json.contenido.telefono;
+            document.querySelector('#correo').value = json.contenido.correo;
+            document.querySelector('#departamento').value = json.contenido.departamento;
+            document.querySelector('#provincia').value = json.contenido.provincia;
+            document.querySelector('#distrito').value = json.contenido.distrito;
+            document.querySelector('#cod_postal').value = json.contenido.cod_postal;
+            document.querySelector('#direccion').value = json.contenido.direccion;
+            document.querySelector('#rol').value = json.contenido.rol;
+        }else{
+            window.location = base_url+"persona";
+        }
+        console.log(json);
+    } catch (error) {
+        console.log("oops ocurrio un error al editar persona"+error)
+    }
+}
+
+async function actualizarPersona() {
+    const datos = new FormData(formActualizarPer);
+    try {
+        let respuesta = await fetch(base_url + 'controller/Persona.php?tipo=actualizar', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: datos
+        });
+        json = await respuesta.json();
+        if(json.status){
+            swal("Registro", json.mensaje, "success");
+        }else{
+            swal("Registro", json.mensaje, "error");
+        }
+        console.log(json);
+    } catch (e) {
+
+    }
+}
+
+async function eliminarPersona(id) {
+    swal({
+        title: "Confirmar eliminación",
+        text: "¿Estás seguro de que deseas eliminar este producto? Esta acción no se puede deshacer.",
+        icon: "warning",
+        buttons: {
+            cancel: {
+                text: "Cancelar",
+                value: null,
+                visible: true,
+                className: "btn btn-secondary",
+                closeModal: true,
+            },
+            confirm: {
+                text: "Eliminar",
+                value: true,
+                visible: true,
+                className: "btn btn-danger",
+                closeModal: false,
+            }
+        },
+        dangerMode: true,
+    }).then((willDelete) => {
+        if (willDelete) {
+            fnt_eliminar(id)
+                
+        }
+          
+    });
+}
+
+async function fnt_eliminar(id) {
+    const formData = new FormData();
+    formData.append('id_persona',id);
+    try{
+        let respuesta = await fetch(base_url+'controller/persona.php?tipo=eliminar',{
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: formData
+        });
+        json = await respuesta.json();
+        if(json.status){
+            swal("Eliminado","Producto eliminado correctamente","success");
+            document.querySelector('#fila'+id).remove();
+        }else{
+            swal("Eliminar","error al eliminar","warning");
+        }
+    } catch (e) {
+        console.log("ocurrio error" + e);
+        
+    }
 }

@@ -55,5 +55,26 @@ require_once "../librerias/conexion.php";
             $objeto = $respuesta->fetch_object();
             return $objeto;
         }
+
+        public function verPersona($id){
+            $sql = $this->conexion->query("SELECT * FROM persona WHERE id='{$id}'");
+            $sql = $sql->fetch_object();
+            return $sql;
+         }
+         public function actualizarPersona($id, $nro_identidad, $razon_social, $telefono, $correo, $departamento, $provincia,
+         $distrito, $cod_postal, $direccion, $rol){
+            $sql = $this->conexion->query("CALL actualizarPersona('{$id}','{$nro_identidad}','{$razon_social}','{$telefono}','{$correo}','{$departamento}','{$provincia}'
+            ,'{$distrito}','{$cod_postal}','{$direccion}','{$rol}')");
+            $sql = $sql->fetch_object();
+            return $sql;
+        }
+        
+        public function eliminarPersona($id){
+            $sql = $this->conexion->query("CALL eliminarPersona('{$id}')");
+            $sql = $sql->fetch_object();
+            return$sql;
+        
+        }
+        
  }
 ?>

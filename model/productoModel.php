@@ -9,11 +9,13 @@ class ProductoModel{
         $this->conexion = $this->conexion->connect();
     }
 
-    public function registrarProducto($codigo, $nombre, $detalle, $precio, $stock, $categoria, $imagen, $proveedor,$tipoArchivo){
-        $sql = $this->conexion->query("CALL insertarProducto('{$codigo}', '{$nombre}', '{$detalle}', '{$precio}', '{$stock}', '{$categoria}', '{$imagen}', '{$proveedor}, '{$tipoArchivo}')");
+    public function registrarProducto($codigo, $nombre, $detalle, $precio, $stock, $categoria, $imagen, $proveedor, $tipoArchivo){
+        $sql = $this->conexion->query("CALL insertarProducto('{$codigo}','{$nombre}','{$detalle}','{$precio}','{$stock}',
+        '{$categoria}','{$imagen}','{$proveedor}','{$tipoArchivo}')");
         $sql = $sql->fetch_object();
         return $sql;
     }
+
     public function actualizar_imagen($id,$nombre){
         $sql = $this->conexion->query("UPDATE producto SET imagen='{$imagen}' WHERE id='{$id}'");
     }

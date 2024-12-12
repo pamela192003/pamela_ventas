@@ -25,7 +25,8 @@ if ($tipo=="listar") {
 
             $id_producto = $arr_Productos[$i]->id;
             $nombre = $arr_Productos[$i]->nombre;
-            $opciones = '<a href="'.BASE_URL.'editar-producto/'.$id_producto.'">Editar</a><button onlick="eliminar_producto('.$id_producto.')">Eliminar</button>';
+            $opciones = '<a href="'.BASE_URL.'editar-producto/'.$id_producto.'"><i class="fas fa-edit btn btn-success btn-sm"></i></a>
+           <button onclick="eliminar_producto('.$id_producto.');"class="btn btn-warning btn-sm"><i class="fas fa-trash-alt"></i></button>';
             $arr_Productos[$i]->options = $opciones;
         }
     $arr_Respuesta['status'] = true;
@@ -34,44 +35,58 @@ if ($tipo=="listar") {
     echo json_encode($arr_Respuesta);
 }
 
-if ($tipo == "registrar") {
+if($tipo=="registrar"){
     //print_r($_POST);
-    //echo $_FILES['imagen']['name'];
+    //echo $_FILES['imagen'] ['name'];
 
-    if ($_POST) {
+   if ($_POST){
         $codigo = $_POST['codigo'];
         $nombre = $_POST['nombre'];
-        $detalle = $_POST['detalle'];
-        $precio = $_POST['precio'];
+        $detalle= $_POST['detalle'];
+        $precio= $_POST['precio'];
+        $stock = $_POST['stock'];
         $categoria = $_POST['categoria'];
+        $imagen = 'imagen';
         $proveedor = $_POST['proveedor'];
-        if ($nombre == "" || $detalle == "" || $precio == "" ||  $categoria == "" ||$proveedor == "") {
-            //repuesta
-            $arr_Respuesta = array('status' => false, 'mensaje' => 'Error, campos vacíos');
-        } else {
 
-            //cargar archivos
-            $archivo = $_FILES['imagen']['tmp_name'];
-            $destino = '../assets/img_productos/';
-            $tipoArchivo = strtolower(pathinfo($_FILES["imagen"]["name"], PATHINFO_EXTENSION));
-
-            $arrProducto = $objProducto->registrarProducto($codigo, $nombre, $detalle, $precio, $categoria, $proveedor, $tipoArchivo);
-            if ($arrProducto->id_n > 0) {
+        if($codigo=="" || $nombre=="" ||  $detalle=="" || $precio=="" ||  $stock=="" || $categoria=="" || $imagen=="" ||  $proveedor==""){
+            //respuesta
+            $arr_Respuesta = array
+            ('status'=>false, 'mensaje'=>'Error, campos vacios');
+        }else{
+            // CARGAR ARCHIVOS
+                $archivo = $_FILES['imagen']['tmp_name'];
+                $destino = '../assets/img_productos/';
+                $tipoArchivo = strtolower(pathinfo($_FILES["imagen"]["name"], PATHINFO_EXTENSION));
+               
+                $arrProducto = $objProducto->registrarProducto($codigo, $nombre, $detalle, $precio, $stock, $categoria, $imagen, $proveedor, $tipoArchivo);
+            if($arrProducto->id_n > 0){
                 $newid = $arrProducto->id_n;
-                $arr_Respuesta = array('status' => true, 'mensaje' => 'Registro Exitoso');
-                $nombre = $arrProducto->id_n . "." . $tipoArchivo;
+                $arr_Respuesta = array
+                ('status'=>true,
+                'mensaje'=>'Registro exitoso');
 
-                if (move_uploaded_file($archivo, $destino . '' . $nombre)) {
-                } else {
-                    $arr_Respuesta = array('status' => true, 'mensaje' => 'Registro Exitoso, error al subir imagen');
+                
+                $nombre = $arrProducto->id_n.".".$tipoArchivo;
+
+                if (move_uploaded_file($archivo,$destino.''.$nombre)) {
+
+                }else{
+                    $arr_Respuesta = array('status' => true,
+                    'mensaje'=> 'Registro Exitoso, error al subir imagen');
                 }
-            } else {
-                $arr_Respuesta = array('status' => false, 'mensaje' => 'Error al registrar producto');
+
+            }else{
+                $arr_Respuesta = array('status'=>false,
+                'mensaje'=> 'Error al registrar producto');
             }
             echo json_encode($arr_Respuesta);
+
+
         }
     }
 }
+
 
 
 if ($tipo == "ver") {

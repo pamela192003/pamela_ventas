@@ -3,16 +3,23 @@
         <thead class="table-dark text-center">
             <tr>
                 <th>Nro</th>
-                <th>producto</th>
+                <th>Producto</th>
                 <th>cantidad</th>
                 <th>precio</th>
-                <th>trabajador</th>
+                <th>Trabajador</th>
                 <th >Acciones</th>
             </tr>
         </thead>
         <tbody id="tbl_compras" class="text-center">
-            
+            <!--<tr>
+                <th>Nro</th>
+                <th>1</th>
+                <th>1</th>
+                <th>50</th>
+                <th>2</th>
+                <th >Acciones</th>
+            </tr> -->
         </tbody>
     </table>
-</div>
+    </div>
 <script src="<?php echo BASE_URL?>views/js/functions_compras.js"></script>

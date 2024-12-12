@@ -1,20 +1,31 @@
 
-<form action="" id="frmRegistrar" style="margin: 10px 50px;">>
-        <label for="id_producto">Producto:</label>
-        <input type="number" id="id_producto" name="id_producto"><br><br>
-
-        <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" name="cantidad"><br><br>
-
-        <label for="precio">Precio:</label>
-        <input type="number" id="precio" name="precio"><br><br>
-
-        <label for="id_trabajador">Trabajador:</label>
-        <input type="text" id="id_trabajador" name="id_trabajador"><br><br>
-
-        <button type="button" class="btn btn-success" onclick="RegistrarCompra()">Registrar</button>
+<div class="container">
+    FORMULARIO DE REGISTRO DE COMPRAS
+    <form action="" class="p-4 " id="frmRegistrar">
+        <div class="form-group">
+            <label for="producto">ID Producto:</label>
+            <select name= "producto" id="producto" class="form-control" required>
+                <option>Seleccione un producto</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" class="form-control" id="cantidad" name="cantidad" required>
+        </div>
+        <div class="form-group">
+            <label for="precio">Precio:</label>
+            <input type="number" class="form-control" id="precio" name="precio" step="0.01" required>
+        </div>
+        <div class="form-group">
+            <label for="trabajador">ID Trabajador:</label>
+            <select name= "trabajador" id="trabajador" class="form-control" required>
+                <option>Seleccione un Trabajador</option>
+            </select>
+        </div>
+      
+        <button type="button" class="btn btn-success" onclick="registrarCompras();">Registrar</button>
     </form>
-
+</div>
 <script src="<?php echo BASE_URL;?>views/js/functions_compras.js"></script>
 <script>listar_productos();</script>
 <script>listar_trabajadores();</script>

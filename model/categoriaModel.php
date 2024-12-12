@@ -29,6 +29,22 @@ class CategoriaModel{
         return $objeto;
     }
 
+    public function verCategoria($id){
+        $sql = $this->conexion->query("SELECT * FROM categoria WHERE id='{$id}'");
+        $sql = $sql->fetch_object();
+        return $sql;
+     }
+     public function actualizarCategoria($id, $nombre, $detalle){
+        $sql = $this->conexion->query("CALL actualizarCategoria('{$id}','{$nombre}','{$detalle}')");
+        $sql = $sql->fetch_object();
+        return $sql;
+    }
+    public function eliminar_categoria($id){
+        $sql = $this->conexion->query("CALL eliminarCategoria('{$id}')");
+        $sql = $sql->fetch_object();
+        return $sql;
+    }
+
 }
 
 

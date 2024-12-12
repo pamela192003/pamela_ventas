@@ -9,7 +9,11 @@
             </tr>
         </thead>
         <tbody id="tbl_categoria" class="text-center">
-         
+            <!--<tr>
+               <th>Nro</th>
+                <th>tacones abiertos</th>
+                <th>Zandalias</th>
+            </tr> -->
         </tbody>
     </table>
 </div>

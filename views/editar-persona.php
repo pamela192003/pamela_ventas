@@ -1,6 +1,7 @@
-<h1 style="text-align: center;">Formulario de Registro de Persona</h1>
+<h1 style="text-align: center;">Formulario de editar Persona</h1>
 <div>
-<form action="POST" id="frmRegistrar">
+<form action="POST" id="frmActualizarP">
+<input type="hidden" name="id_persona" id="id_persona">
     <div>
         <label for="nro_identidad">Número de Identidad:</label>
         <input type="text" id="nro_identidad" name="nro_identidad" class="form-control" required>
@@ -41,15 +42,13 @@
         <label for="">Rol: </label>
         <input type="text" class="form-control" required id="rol" name="rol">
     </div>
-    <button type="button" class="btn btn-success" onclick="registrarPersona()">Registrar</button>
+    <button type="button" class="btn btn-success" onclick="actualizarPersona()">Actualizar</button>
 </form>
 
+<script src="<?php echo BASE_URL;?>views/js/functions_persona.js"></script>
 
-<script src="<?php echo BASE_URL ?>views/js/functions_persona.js"></script>
-<script>listar_categorias();</script>
-<script>listar_proveedor();</script>
 <script>
-    //http://localhost/pamela_ventas/editar-persona/1
-    const id_p=<?php $pagina= explode("/", $_GET['views']); echo $pagina['1'] ;?>; //captura el link
+    //http://localhost/pamela_ventas/personaseditar-producto/1
+    const id_p=<?php $pagina=explode("/", $_GET['views']); echo $pagina['1'];  ?>;
     ver_persona(id_p);
 </script>
