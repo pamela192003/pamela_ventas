@@ -83,7 +83,7 @@ async function ver_persona(id) {
     const formData = new FormData();
     formData.append('id_persona', id); 
     try {
-        let respuesta = await fetch(base_url+'controller/Persona.php?tipo=ver', {
+        let respuesta = await fetch(base_url+'controller/persona.php?tipo=ver', {
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
@@ -112,9 +112,9 @@ async function ver_persona(id) {
 }
 
 async function actualizarPersona() {
-    const datos = new FormData(formActualizarPer);
+    const datos = new FormData(formActualizarP);
     try {
-        let respuesta = await fetch(base_url + 'controller/Persona.php?tipo=actualizar', {
+        let respuesta = await fetch(base_url + 'controller/persona.php?tipo=actualizar', {
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
@@ -151,7 +151,7 @@ async function fnt_eliminar(id) {
     formData.append('id_persona',
         id);
         try {
-            let respuesta = await fetch(base_url + 'controller/Persona.php?tipo=eliminar',{
+            let respuesta = await fetch(base_url + 'controller/persona.php?tipo=eliminar',{
                  method: 'POST',
                  mode: 'cors',
                  cache: 'no-cache',

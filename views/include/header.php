@@ -8,19 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
-    <style>
-      .footer {
-            background-color: peachpuff;
-            padding: 10px;
-            text-align: center;
-            border-top: 1px solid #ddd;
-            }
-    </style>
-    <script>
-      const base_url = '<?php echo BASE_URL; ?>';
-    </script>
-</head>
-<body>
     <div class="container-fluid p-0 ">
         <nav class="navbar navbar-expand-lg" style="background-color:pink">
 
@@ -52,6 +39,38 @@
         <button type="button" class="me-2 btn" onclick="cerrar_sesion();"><i class="bi bi-box-arrow-right"></i> Cerrar sesion</button>
                             </ul>
                  </div>
+                 <style>
+      .footer {
+            background-color: peachpuff;
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            }
+    </style>
+    <script>
+      const base_url = '<?php echo BASE_URL; ?>';
+    </script>
+</head>
+<body>
+
+<title>Icono de Panel</title>
+  <style>
+    .panel-icon {
+      width: 50px;
+      height: 50px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel-icon">
+    ⚙️
+  </div>
                 
                 <!-- FIN BARRA DE TAREAS -->
 

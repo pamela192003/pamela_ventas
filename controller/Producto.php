@@ -115,7 +115,6 @@ if($tipo == "actualizar") {
     $proveedor = $_POST['proveedor'];
     if ($nombre == "" || $detalle == "" || $precio == "" || $categoria == "" || $proveedor == "") {
         $arr_Respuesta = array('status' => false, 'mensaje' => 'Error, campos vacios'); //respuesta
-
     } else {
         $arrProducto = $objProducto->actualizarProducto($id_producto, $nombre, $detalle, $precio, $categoria, $proveedor);
         if ($arrProducto->p_id > 0) {

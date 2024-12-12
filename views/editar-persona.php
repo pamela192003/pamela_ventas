@@ -1,6 +1,6 @@
 <h1 style="text-align: center;">Formulario de editar Persona</h1>
 <div>
-<form action="POST" id="frmActualizarP">
+<form action="POST" id="formActualizarP">
 <input type="hidden" name="id_persona" id="id_persona">
     <div>
         <label for="nro_identidad">Número de Identidad:</label>
