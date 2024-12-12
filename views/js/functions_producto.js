@@ -145,7 +145,7 @@ async function ver_producto(id) {
 
         console.log(json);
     } catch (e) {
-        console.log("Oops ocurrio un error "+error);
+        console.log("Oops ocurrio un error "+ e);
     }
 }
 
