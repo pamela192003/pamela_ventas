@@ -12,7 +12,7 @@
             </tr>
         </thead>
         <tbody id="tbl_producto">
-                <tr>
+             <!--   <tr>
                     <td>1</td>
                     <td>123456</td>
                     <td>producto</td>
@@ -20,7 +20,7 @@
                     <td>categoria</td>
                     <td>yo</td>
                     <td>editar eliminar</td>
-                </tr>
+                </tr> -->
         </tbody>
     </table>
 </div>
