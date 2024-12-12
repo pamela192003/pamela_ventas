@@ -46,3 +46,7 @@
     const id_p=<?php $pagina= explode("/", $_GET['views']); echo $pagina['1'] ;?>; //captura el link
     ver_producto(id_p);
 </script>
+
+<button class="btn btn-secondary" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Volver Atrás
+        </button>

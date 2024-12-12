@@ -14,7 +14,7 @@
 
             <div class="container-fluid">
                 <a class="navbar-brand" href="">
-                    <img src="logo.png" alt="logo" width="70" height="70">
+                    <img src="<?php echo BASE_URL; ?>logo.png" alt="logo" width="70" height="70">
                   </a>
 
 
