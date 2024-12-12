@@ -1,4 +1,9 @@
+
+
 <div class="col-12 container mt-4">
+    <div>
+        <a href=""></a>
+    </div>
     <table class="table table-bordered  table-sm shadow-lg table-striped table-hover">
         <thead class="table-warning text-center">
             <tr>
@@ -24,4 +29,9 @@
         </tbody>
     </table>
 </div>
+</div>
+<button class="btn btn-secondary" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Volver Atrás
+        </button>
 <script src="<?php echo BASE_URL ?>views/js/functions_producto.js"></script>
+

@@ -53,24 +53,7 @@
 </head>
 <body>
 
-<title>Icono de Panel</title>
-  <style>
-    .panel-icon {
-      width: 50px;
-      height: 50px;
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      text-align: center;
-      line-height: 50px;
-      font-size: 24px;
-    }
-  </style>
-</head>
-<body>
-  <div class="panel-icon">
-    ⚙️
-  </div>
+<a href="<?php echo BASE_URL ?>admin" class="btn btn-primary mb-2"><i class="fas "></i>PANEL</a>
                 
                 <!-- FIN BARRA DE TAREAS -->
 

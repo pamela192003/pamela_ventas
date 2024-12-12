@@ -11,3 +11,7 @@
     <button type="button" class="btn btn-info " onclick="registrarCategoria();">Registrar</button>
 </form>
 <script src="<?php echo BASE_URL;?>views/js/functions-categoria.js"></script>
+
+<button class="btn btn-secondary" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Volver Atrás
+        </button>

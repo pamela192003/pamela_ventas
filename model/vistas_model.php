@@ -5,7 +5,7 @@ class vistaModelo{
     protected static function obtener_vista($vista){
         $palabras_permitidas =['usuarios','nuevo-usuario','usuario', 'inicio','hombres','carrito','nuevo','contacto','detalles-producto',
     'factura-pago','kids','login','perfil','registrarse','sobre-nosotros','nuevo-productos','nueva-persona','nuevo-categoria','nuevo-compras','productos','categoria','compra','editar-producto',
-'editar-persona','editar-categoria','editar-compra','personas']; //carpetas de html
+'editar-persona','editar-categoria','editar-compra','personas','admin']; //carpetas de html
    /* if (!isset($_SESSION['sesion_ventas_id'])) {
         return "login";
     }*/

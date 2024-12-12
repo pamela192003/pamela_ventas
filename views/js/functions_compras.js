@@ -94,7 +94,7 @@ try {
             contenido_select1 += '<option value="'+element.id+'">'+element.nombre+'</option>';
            
         });
-        document.getElementById('id_producto').innerHTML = contenido_select1;
+        document.getElementById('producto').innerHTML = contenido_select1;
     }
     console.log(respuesta);
 } catch (e) {

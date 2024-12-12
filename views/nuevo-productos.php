@@ -43,3 +43,6 @@
 <script src="<?php echo BASE_URL ?>views/js/functions_producto.js"></script>
 <script>listar_categorias();</script>
 <script>listar_proveedor();</script>
+<button class="btn btn-secondary" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Volver Atrás
+        </button>

@@ -43,7 +43,7 @@ require_once "../librerias/conexion.php";
         }
         public function obtenerPersona(){
             $arrRespuesta = array();
-            $respuesta = $this->conexion->query("SELECT * FROM persona");
+            $respuesta = $this->conexion->query("SELECT * FROM persona WHERE estado = 1");
             while ($objeto = $respuesta->fetch_object()) {
                 array_push($arrRespuesta,$objeto);
                 

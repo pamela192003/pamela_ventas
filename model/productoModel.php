@@ -20,10 +20,9 @@ class ProductoModel{
         $sql = $this->conexion->query("UPDATE producto SET imagen='{$imagen}' WHERE id='{$id}'");
     }
 
-    public function obtener_productos()
-    {
+    public function obtener_productos(){
         $arrRespuesta = array();
-        $respuesta = $this->conexion->query(" SELECT * FROM producto");
+        $respuesta = $this->conexion->query(" SELECT * FROM producto WHERE estado = 1");
         while ($objeto = $respuesta->fetch_object()) {
             array_push($arrRespuesta, $objeto);
         }

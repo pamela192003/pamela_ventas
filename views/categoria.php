@@ -17,4 +17,7 @@
         </tbody>
     </table>
 </div>
+<button class="btn btn-secondary" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Volver Atrás
+        </button>
 <script src="<?php echo BASE_URL ?>views/js/functions-categoria.js"></script>
