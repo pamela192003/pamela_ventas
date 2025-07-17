@@ -3,91 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moda Juvenil</title>
+    <title>Moda Urbana Joven</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
     <style>
         :root {
-            --color-primario: #ff85a2;
-            --color-secundario: #ffd6e0;
-            --color-acento: #ff6b97;
-            --color-texto: #5a3d5c;
+            --color-primario: #6a5acd;  /* Lila moderno */
+            --color-secundario: #9370db; /* Lila claro */
+            --color-acento: #ff8c00;    /* Naranja vibrante */
+            --color-texto: #2f2f2f;      /* Gris oscuro */
+            --color-fondo: #f8f9fa;      /* Gris claro */
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fff9fb;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            background-color: var(--color-fondo);
         }
         
         .navbar {
-            background: linear-gradient(135deg, var(--color-primario), #ffb3d9) !important;
-            box-shadow: 0 4px 15px rgba(255, 107, 151, 0.2);
+            background: linear-gradient(90deg, var(--color-primario), var(--color-secundario)) !important;
+            box-shadow: 0 4px 20px rgba(106, 90, 205, 0.3);
+            border-bottom: 3px solid var(--color-acento);
         }
         
         .nav-link {
-            color: var(--color-texto) !important;
+            color: white !important;
             font-weight: 600;
             transition: all 0.3s;
             position: relative;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
         }
         
         .nav-link:hover {
-            color: white !important;
-            transform: translateY(-2px);
+            color: var(--color-acento) !important;
+            transform: translateY(-3px);
         }
         
         .nav-link h4 {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin: 0;
+            display: inline-flex;
+            align-items: center;
         }
         
         .nav-link:after {
             content: '';
             position: absolute;
             width: 0;
-            height: 2px;
+            height: 3px;
             bottom: 0;
-            left: 0;
-            background-color: white;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--color-acento);
             transition: width 0.3s;
+            border-radius: 3px;
         }
         
         .nav-link:hover:after {
-            width: 100%;
+            width: 70%;
         }
         
         .btn-outline-success {
-            color: var(--color-acento);
-            border-color: var(--color-acento);
+            color: white;
+            border-color: white;
         }
         
         .btn-outline-success:hover {
-            background-color: var(--color-acento);
-            color: white;
+            background-color: white;
+            color: var(--color-primario);
         }
         
         .form-control:focus {
             border-color: var(--color-acento);
-            box-shadow: 0 0 0 0.25rem rgba(255, 107, 151, 0.25);
+            box-shadow: 0 0 0 0.25rem rgba(255, 140, 0, 0.25);
         }
         
         .footer {
-            background: linear-gradient(135deg, var(--color-secundario), #ffe6f0);
+            background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
             padding: 15px;
             text-align: center;
-            border-top: 1px solid #ffd6e0;
-            color: var(--color-texto);
+            color: white;
             font-weight: 500;
+            margin-top: 30px;
         }
         
         .bi-person-fill, .bi-cart-fill {
-            transition: transform 0.3s;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
         .bi-person-fill:hover, .bi-cart-fill:hover {
-            transform: scale(1.1);
+            transform: scale(1.15) rotate(5deg);
             color: var(--color-acento);
         }
         
@@ -98,40 +107,78 @@
         #iconocar:after {
             content: attr(data-count);
             position: absolute;
-            top: -5px;
-            right: -5px;
+            top: -8px;
+            right: -8px;
             background-color: var(--color-acento);
             color: white;
             border-radius: 50%;
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border: 2px solid white;
         }
         
         .btn-primary {
             background-color: var(--color-acento);
             border-color: var(--color-acento);
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
         
         .btn-primary:hover {
-            background-color: #ff4d88;
-            border-color: #ff4d88;
+            background-color: #e67e00;
+            border-color: #e67e00;
+            transform: translateY(-2px);
         }
         
         .logo-img {
-            border-radius: 50%;
+            border-radius: 15px;
             object-fit: cover;
             border: 3px solid white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background-color: white;
+            padding: 5px;
         }
         
         .logo-img:hover {
-            transform: rotate(10deg);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transform: rotate(-10deg) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        /* Efecto de neón para los íconos del menú */
+        .nav-link i {
+            text-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+            transition: text-shadow 0.3s;
+        }
+        
+        .nav-link:hover i {
+            text-shadow: 0 0 12px rgba(255, 140, 0, 0.7);
+        }
+        
+        /* Estilo para la barra de búsqueda */
+        .form-control {
+            border-radius: 20px;
+            padding: 10px 20px;
+            border: 2px solid transparent;
+        }
+        
+        /* Efecto de hover para los botones de sesión */
+        .btn-outline-light {
+            border-radius: 20px;
+            padding: 5px 15px;
+            transition: all 0.3s;
+            border-width: 2px;
+        }
+        
+        .btn-outline-light:hover {
+            background-color: white;
+            color: var(--color-primario) !important;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -140,7 +187,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="">
-                    <!-- REEMPLAZA ESTA URL CON LA DIRECCIÓN DIRECTA DE TU IMAGEN DE FACEBOOK -->
+                    <!-- Logo alternativo - puedes usar este o el anterior -->
                     <img src="https://scontent.fjau2-1.fna.fbcdn.net/v/t39.30808-6/476433894_1035369005273384_1370971289834915461_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=gZnz1Z2TL0UQ7kNvwEzcWOP&_nc_oc=Adm8yL31RXH12B2N8NL3JDF--EZ0ZaoSL3R29dQGG3xCsmoymD7dBg4PTxA6tRn-_JA&_nc_zt=23&_nc_ht=scontent.fjau2-1.fna&_nc_gid=lHScLscHwKYrCowhKy9WeQ&oh=00_AfRf-X35MsPl0AGT6I79XL4GEQg0ssVBh9Bce70Z_m-89A&oe=687F2F0F" 
                          alt="logo" 
                          class="logo-img" 
@@ -152,20 +199,20 @@
                     <!-- INICIO BARRA DE TAREAS -->
                     <div>
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item" style="margin-left: 90px; margin-right: 10px;">
-                                <a class="nav-link" href="<?php echo BASE_URL ?>nuevo"><h4><i class="bi bi-stars me-2"></i>¡LO NUEVO!</h4></a>
+                            <li class="nav-item" style="margin-left: 70px; margin-right: 10px;">
+                                <a class="nav-link" href="<?php echo BASE_URL ?>nuevo"><h4><i class="bi bi-lightning-charge-fill me-2"></i>NUEVOS</h4></a>
                             </li>
-                            <li class="nav-item" style="margin-left: 90px;">
-                                <a class="nav-link" href="<?php echo BASE_URL ?>kids"><h4><i class="bi bi-emoji-sunglasses me-2"></i>ZONA KIDS</h4></a>
+                            <li class="nav-item" style="margin-left: 70px;">
+                                <a class="nav-link" href="<?php echo BASE_URL ?>kids"><h4><i class="bi bi-emoji-laughing-fill me-2"></i>KIDS</h4></a>
                             </li>
-                            <li class="nav-item" style="margin-left: 90px;">
-                                <a class="nav-link" href="<?php echo BASE_URL ?>hombres"><h4><i class="bi bi-person me-2"></i>HOMBRES</h4></a>
+                            <li class="nav-item" style="margin-left: 70px;">
+                                <a class="nav-link" href="<?php echo BASE_URL ?>hombres"><h4><i class="bi bi-person-arms-up me-2"></i>HOMBRES</h4></a>
                             </li>
-                            <li class="nav-item" style="margin-left: 90px;">
-                                <a class="nav-link" href="<?php echo BASE_URL ?>kids"><h4><i class="bi bi-heart-fill me-2"></i>MUJERES</h4></a>
+                            <li class="nav-item" style="margin-left: 70px;">
+                                <a class="nav-link" href="<?php echo BASE_URL ?>kids"><h4><i class="bi bi-gender-female me-2"></i>MUJERES</h4></a>
                             </li>
                             <button type="button" class="me-2 btn btn-outline-light"> <i class="bi bi-person-fill"></i> <?php echo $_SESSION['sesion_ventas_nombres'];?></button>
-                            <button type="button" class="me-2 btn btn-outline-light" onclick="cerrar_sesion();"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</button>
+                            <button type="button" class="me-2 btn btn-outline-light" onclick="cerrar_sesion();"><i class="bi bi-box-arrow-right"></i> Salir</button>
                         </ul>
                     </div>
                     <!-- FIN BARRA DE TAREAS -->
