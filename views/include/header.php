@@ -141,7 +141,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="">
                     <!-- REEMPLAZA ESTA URL CON LA DIRECCIÓN DIRECTA DE TU IMAGEN DE FACEBOOK -->
-                    <img src="https://scontent.fmex10-4.fna.fbcdn.net/v/t39.30808-6/447204960756461_447204914089799.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=...YOUR_ACTUAL_IMAGE_URL_HERE..." 
+                    <img src="https://scontent.fjau2-1.fna.fbcdn.net/v/t39.30808-6/476433894_1035369005273384_1370971289834915461_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=gZnz1Z2TL0UQ7kNvwEzcWOP&_nc_oc=Adm8yL31RXH12B2N8NL3JDF--EZ0ZaoSL3R29dQGG3xCsmoymD7dBg4PTxA6tRn-_JA&_nc_zt=23&_nc_ht=scontent.fjau2-1.fna&_nc_gid=lHScLscHwKYrCowhKy9WeQ&oh=00_AfRf-X35MsPl0AGT6I79XL4GEQg0ssVBh9Bce70Z_m-89A&oe=687F2F0F" 
                          alt="logo" 
                          class="logo-img" 
                          width="70" 
