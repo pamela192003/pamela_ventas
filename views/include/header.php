@@ -295,12 +295,12 @@
                                 <i class="fas fa-person nav-icon"></i>Urban Men
                             </a>
                         </li>
-                        
+                        <!-- 
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo BASE_URL ?>mujeres">
                                 <i class="fas fa-person-dress nav-icon"></i>Hype Women
                             </a>
-                        
+                        </li>-->
                     </ul>
 
                     <div class="d-flex align-items-center">
