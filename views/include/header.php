@@ -1,82 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Moda Juvenil</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
-    <div class="container-fluid p-0 ">
-        <nav class="navbar navbar-expand-lg" style="background-color:pink">
-
-
-            <div class="container-fluid">
-                <a class="navbar-brand" href="">
-                    <img src="<?php echo BASE_URL; ?>logo.png" alt="logo" width="70" height="70">
-                  </a>
-
-
-                  <div class="collapse navbar-collapse t-5" id="navbarSupportedContent" style="display: inline-flex; justify-content: space-between;">
-
-                <!-- INICIO BARRA DE TAREAS -->
-                 <div >
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item" style="margin-left: 90px; margin-right: 10px;">   <!-- CAMBIO MARGIN LEFT PARA MOVER -->
-                            <a class="nav-link" href="<?php echo BASE_URL ?>nuevo" ><h4>¡LO NUEVO!</h4></a>
-                        </li>
-                            <li class="nav-item" style="margin-left: 90px;">
-                                <a class="nav-link" href="<?php echo BASE_URL ?>kids"><h4>ZONA KIDS</h4></a>
-                            </li>
-                            <li class="nav-item" style="margin-left: 90px;">
-                                <a class="nav-link" href="<?php echo BASE_URL ?>hombres"><h4>HOMBRES</h4></a>
-                            </li>
-                            <li class="nav-item" style="margin-left: 90px;">
-                                <a class="nav-link" href="<?php echo BASE_URL ?>kids"><h4>MUJERES</h4></a>
-                            </li>
-                            <button type="button" class="me-2 btn "> <i class="bi bi-person-fill"></i> <?php echo $_SESSION['sesion_ventas_nombres'];?></button>
-        <button type="button" class="me-2 btn" onclick="cerrar_sesion();"><i class="bi bi-box-arrow-right"></i> Cerrar sesion</button>
-                            </ul>
-                 </div>
-                 <style>
-      .footer {
-            background-color: peachpuff;
-            padding: 10px;
+    <style>
+        :root {
+            --color-primario: #ff85a2;
+            --color-secundario: #ffd6e0;
+            --color-acento: #ff6b97;
+            --color-texto: #5a3d5c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff9fb;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--color-primario), #ffb3d9) !important;
+            box-shadow: 0 4px 15px rgba(255, 107, 151, 0.2);
+        }
+        
+        .nav-link {
+            color: var(--color-texto) !important;
+            font-weight: 600;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+            transform: translateY(-2px);
+        }
+        
+        .nav-link h4 {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .btn-outline-success {
+            color: var(--color-acento);
+            border-color: var(--color-acento);
+        }
+        
+        .btn-outline-success:hover {
+            background-color: var(--color-acento);
+            color: white;
+        }
+        
+        .form-control:focus {
+            border-color: var(--color-acento);
+            box-shadow: 0 0 0 0.25rem rgba(255, 107, 151, 0.25);
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, var(--color-secundario), #ffe6f0);
+            padding: 15px;
             text-align: center;
-            border-top: 1px solid #ddd;
-            }
+            border-top: 1px solid #ffd6e0;
+            color: var(--color-texto);
+            font-weight: 500;
+        }
+        
+        .bi-person-fill, .bi-cart-fill {
+            transition: transform 0.3s;
+        }
+        
+        .bi-person-fill:hover, .bi-cart-fill:hover {
+            transform: scale(1.1);
+            color: var(--color-acento);
+        }
+        
+        #iconocar {
+            position: relative;
+        }
+        
+        #iconocar:after {
+            content: attr(data-count);
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: var(--color-acento);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--color-acento);
+            border-color: var(--color-acento);
+        }
+        
+        .btn-primary:hover {
+            background-color: #ff4d88;
+            border-color: #ff4d88;
+        }
+        
+        .logo-img {
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .logo-img:hover {
+            transform: rotate(10deg);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
     </style>
-    <script>
-      const base_url = '<?php echo BASE_URL; ?>';
-    </script>
 </head>
 <body>
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="">
+                    <!-- REEMPLAZA ESTA URL CON LA DIRECCIÓN DIRECTA DE TU IMAGEN DE FACEBOOK -->
+                    <img src="https://scontent.fmex10-4.fna.fbcdn.net/v/t39.30808-6/447204960756461_447204914089799.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=...YOUR_ACTUAL_IMAGE_URL_HERE..." 
+                         alt="logo" 
+                         class="logo-img" 
+                         width="70" 
+                         height="70">
+                </a>
 
-<a href="<?php echo BASE_URL ?>admin" class="btn btn-primary mb-2"><i class="fas "></i>PANEL</a>
-                
-                <!-- FIN BARRA DE TAREAS -->
+                <div class="collapse navbar-collapse t-5" id="navbarSupportedContent" style="display: inline-flex; justify-content: space-between;">
+                    <!-- INICIO BARRA DE TAREAS -->
+                    <div>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item" style="margin-left: 90px; margin-right: 10px;">
+                                <a class="nav-link" href="<?php echo BASE_URL ?>nuevo"><h4><i class="bi bi-stars me-2"></i>¡LO NUEVO!</h4></a>
+                            </li>
+                            <li class="nav-item" style="margin-left: 90px;">
+                                <a class="nav-link" href="<?php echo BASE_URL ?>kids"><h4><i class="bi bi-emoji-sunglasses me-2"></i>ZONA KIDS</h4></a>
+                            </li>
+                            <li class="nav-item" style="margin-left: 90px;">
+                                <a class="nav-link" href="<?php echo BASE_URL ?>hombres"><h4><i class="bi bi-person me-2"></i>HOMBRES</h4></a>
+                            </li>
+                            <li class="nav-item" style="margin-left: 90px;">
+                                <a class="nav-link" href="<?php echo BASE_URL ?>kids"><h4><i class="bi bi-heart-fill me-2"></i>MUJERES</h4></a>
+                            </li>
+                            <button type="button" class="me-2 btn btn-outline-light"> <i class="bi bi-person-fill"></i> <?php echo $_SESSION['sesion_ventas_nombres'];?></button>
+                            <button type="button" class="me-2 btn btn-outline-light" onclick="cerrar_sesion();"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</button>
+                        </ul>
+                    </div>
+                    <!-- FIN BARRA DE TAREAS -->
 
+                    <form class="d-flex" style="margin-right: 40px; margin-left: 40px;" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
 
-                <form class="d-flex" style="margin-right: 40px; margin-left: 40px;" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <a class="btn btn-outline-success" href="<?php echo BASE_URL ?>nuevo">search</a>
-
-                  
-                  
-                  <a href="<?php echo BASE_URL ?>login"><svg xmlns="http://www.w3.org/2000/svg" width="90" height="50" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></a>
-                    
-                  </svg>
-                  <a id="iconocar" href="<?php echo BASE_URL ?>carrito">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="80" height="45" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                    </a>
-                </svg>
-                
-
-                  </div>
-                </form>
-              </div>
+                        <a href="<?php echo BASE_URL ?>login" class="ms-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                            </svg>
+                        </a>
+                        
+                        <a id="iconocar" href="<?php echo BASE_URL ?>carrito" class="ms-3" data-count="3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                            </svg>
+                        </a>
+                    </form>
+                </div>
             </div>
-          </nav>
+        </nav>
+
+        <script>
+            const base_url = '<?php echo BASE_URL; ?>';
+        </script>
+    </div>
+</body>
+</html>
