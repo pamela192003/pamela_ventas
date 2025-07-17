@@ -16,7 +16,7 @@
   <div class="footer-contact">
     <div class="contact-item zoom">
       <i class="fas fa-map-marker-alt"></i>
-      <span>AV. SAN MARTIN N° 269</span>
+      <span>JR. OSWALDO N. REGAL Nº 278 - HUANTA</span>
     </div>
     <div class="contact-item zoom">
       <i class="fas fa-phone-alt"></i>

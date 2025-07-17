@@ -3,236 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moda Urbana Joven</title>
+    <title>STREETWEAR X | Moda Urbana Joven</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Kanit:wght@400;700&display=swap" rel="stylesheet">
     <script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
     <style>
         :root {
-            --color-primario: #6a5acd;  /* Lila moderno */
-            --color-secundario: #9370db; /* Lila claro */
-            --color-acento: #ff8c00;    /* Naranja vibrante */
-            --color-texto: #2f2f2f;      /* Gris oscuro */
-            --color-fondo: #f8f9fa;      /* Gris claro */
+            --color-primario: #FF3E9D;  /* Rosa neón */
+            --color-secundario: #00F5FF; /* Azul eléctrico */
+            --color-acento: #FFDE59;    /* Amarillo fluo */
+            --color-texto: #1A1A1A;      /* Negro puro */
+            --color-fondo: #0D0D0D;      /* Negro oscuro */
+            --color-detalle: #8A2BE2;   /* Violeta eléctrico */
         }
         
         body {
-            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            font-family: 'Kanit', sans-serif;
             background-color: var(--color-fondo);
+            color: white;
+            overflow-x: hidden;
         }
         
         .navbar {
-            background: linear-gradient(90deg, var(--color-primario), var(--color-secundario)) !important;
-            box-shadow: 0 4px 20px rgba(106, 90, 205, 0.3);
+            background: var(--color-fondo) !important;
             border-bottom: 3px solid var(--color-acento);
+            padding: 10px 0;
         }
         
+        /* Logo con efecto graffiti */
+        .logo-img {
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--color-acento);
+            box-shadow: 0 0 25px rgba(255, 222, 89, 0.7);
+            transition: all 0.4s;
+            background: black;
+            padding: 3px;
+            transform: rotate(-5deg);
+            filter: drop-shadow(0 0 5px var(--color-primario));
+        }
+        
+        .logo-img:hover {
+            transform: rotate(5deg) scale(1.1);
+            box-shadow: 0 0 35px rgba(255, 62, 157, 0.8);
+            border-color: var(--color-primario);
+        }
+        
+        /* Menú estilo street */
         .nav-link {
             color: white !important;
-            font-weight: 600;
+            font-weight: 700;
             transition: all 0.3s;
             position: relative;
             text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
+            font-size: 0.95rem;
+            letter-spacing: 1.5px;
+            margin: 0 10px;
+            padding: 8px 0 !important;
+            font-family: 'Bungee', cursive;
+            text-shadow: 1px 1px 0 var(--color-primario);
         }
         
         .nav-link:hover {
             color: var(--color-acento) !important;
-            transform: translateY(-3px);
+            transform: translateY(-5px);
+            text-shadow: 2px 2px 0 var(--color-detalle),
+                         0 0 10px var(--color-secundario);
         }
         
-        .nav-link h4 {
-            font-size: 1rem;
-            margin: 0;
-            display: inline-flex;
-            align-items: center;
-        }
-        
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--color-acento);
-            transition: width 0.3s;
-            border-radius: 3px;
-        }
-        
-        .nav-link:hover:after {
-            width: 70%;
-        }
-        
-        .btn-outline-success {
-            color: white;
-            border-color: white;
-        }
-        
-        .btn-outline-success:hover {
-            background-color: white;
-            color: var(--color-primario);
-        }
-        
-        .form-control:focus {
-            border-color: var(--color-acento);
-            box-shadow: 0 0 0 0.25rem rgba(255, 140, 0, 0.25);
-        }
-        
-        .footer {
-            background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
-            padding: 15px;
-            text-align: center;
-            color: white;
-            font-weight: 500;
-            margin-top: 30px;
-        }
-        
-        .bi-person-fill, .bi-cart-fill {
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .bi-person-fill:hover, .bi-cart-fill:hover {
-            transform: scale(1.15) rotate(5deg);
-            color: var(--color-acento);
-        }
-        
-        #iconocar {
-            position: relative;
-        }
-        
-        #iconocar:after {
-            content: attr(data-count);
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background-color: var(--color-acento);
-            color: white;
-            border-radius: 50%;
-            width: 22px;
-            height: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            font-weight: bold;
-            border: 2px solid white;
-        }
-        
-        .btn-primary {
-            background-color: var(--color-acento);
-            border-color: var(--color-acento);
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-        
-        .btn-primary:hover {
-            background-color: #e67e00;
-            border-color: #e67e00;
-            transform: translateY(-2px);
-        }
-        
-        .logo-img {
-            border-radius: 15px;
-            object-fit: cover;
-            border: 3px solid white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            background-color: white;
-            padding: 5px;
-        }
-        
-        .logo-img:hover {
-            transform: rotate(-10deg) scale(1.05);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        }
-        
-        /* Efecto de neón para los íconos del menú */
         .nav-link i {
-            text-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
-            transition: text-shadow 0.3s;
+            margin-right: 8px;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+            vertical-align: middle;
         }
         
         .nav-link:hover i {
-            text-shadow: 0 0 12px rgba(255, 140, 0, 0.7);
+            color: var(--color-secundario);
+            transform: scale(1.3) rotate(10deg);
+            filter: drop-shadow(0 0 5px var(--color-secundario));
         }
         
-        /* Estilo para la barra de búsqueda */
-        .form-control {
-            border-radius: 20px;
-            padding: 10px 20px;
-            border: 2px solid transparent;
-        }
-        
-        /* Efecto de hover para los botones de sesión */
-        .btn-outline-light {
-            border-radius: 20px;
-            padding: 5px 15px;
+        /* Botones estilo sticker */
+        .btn-street {
+            background: black;
+            color: white;
+            border: 2px solid var(--color-acento);
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
             transition: all 0.3s;
-            border-width: 2px;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Bungee', cursive;
+            text-transform: uppercase;
+            box-shadow: 3px 3px 0 var(--color-primario);
         }
         
-        .btn-outline-light:hover {
-            background-color: white;
-            color: var(--color-primario) !important;
-            transform: translateY(-2px);
+        .btn-street:hover {
+            background: var(--color-primario);
+            color: black;
+            transform: translate(-3px, -3px);
+            box-shadow: 6px 6px 0 var(--color-detalle);
+            border-color: white;
+        }
+        
+        .btn-street-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--color-secundario);
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-weight: 700;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Bungee', cursive;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
+        }
+        
+        .btn-street-outline:hover {
+            background: var(--color-secundario);
+            color: black;
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(0, 245, 255, 0.8);
+        }
+        
+        /* Barra de búsqueda estilo neón */
+        .search-box {
+            border-radius: 50px;
+            padding: 10px 20px;
+            border: 2px solid var(--color-primario);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            transition: all 0.3s;
+            font-family: 'Kanit', sans-serif;
+            box-shadow: 0 0 10px rgba(255, 62, 157, 0.3);
+        }
+        
+        .search-box:focus {
+            background: rgba(0, 0, 0, 0.9);
+            border-color: var(--color-secundario);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+            color: white;
+            outline: none;
+        }
+        
+        .search-box::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+        
+        /* Íconos del carrito y usuario */
+        .icon-wrapper {
+            position: relative;
+            margin-left: 20px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .icon-wrapper:hover {
+            transform: scale(1.2) rotate(10deg);
+            filter: drop-shadow(0 0 8px var(--color-acento));
+        }
+        
+        .cart-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--color-primario);
+            color: black;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+            font-family: 'Bungee', cursive;
+            border: 2px solid black;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Efecto de neón para los íconos */
+        .nav-icon {
+            filter: drop-shadow(0 0 3px var(--color-secundario));
+            transition: all 0.3s;
+        }
+        
+        .nav-icon:hover {
+            filter: drop-shadow(0 0 10px var(--color-primario));
+            transform: scale(1.2) rotate(-10deg);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .navbar-collapse {
+                background: var(--color-texto);
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 15px;
+                border: 2px solid var(--color-acento);
+                box-shadow: 0 0 20px var(--color-primario);
+            }
+            
+            .nav-link {
+                margin: 10px 0;
+                padding: 12px 15px !important;
+                border-radius: 5px;
+                background: rgba(0, 0, 0, 0.7);
+                text-align: center;
+            }
+            
+            .nav-link:hover {
+                background: var(--color-primario);
+                color: black !important;
+            }
+            
+            .search-box {
+                margin-top: 15px;
+            }
+        }
+        
+        /* Efecto especial para el navbar */
+        .navbar::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                var(--color-primario), 
+                var(--color-secundario), 
+                var(--color-acento), 
+                var(--color-detalle));
+            background-size: 300% 100%;
+            animation: gradientFlow 5s ease infinite;
+        }
+        
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
 <body>
     <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
                 <a class="navbar-brand" href="">
-                    <!-- Logo alternativo - puedes usar este o el anterior -->
                     <img src="https://scontent.fjau2-1.fna.fbcdn.net/v/t39.30808-6/476433894_1035369005273384_1370971289834915461_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=gZnz1Z2TL0UQ7kNvwEzcWOP&_nc_oc=Adm8yL31RXH12B2N8NL3JDF--EZ0ZaoSL3R29dQGG3xCsmoymD7dBg4PTxA6tRn-_JA&_nc_zt=23&_nc_ht=scontent.fjau2-1.fna&_nc_gid=lHScLscHwKYrCowhKy9WeQ&oh=00_AfRf-X35MsPl0AGT6I79XL4GEQg0ssVBh9Bce70Z_m-89A&oe=687F2F0F" 
-                         alt="logo" 
+                         alt="STREETWEAR X" 
                          class="logo-img" 
-                         width="70" 
-                         height="70">
+                         width="65" 
+                         height="65">
                 </a>
 
-                <div class="collapse navbar-collapse t-5" id="navbarSupportedContent" style="display: inline-flex; justify-content: space-between;">
-                    <!-- INICIO BARRA DE TAREAS -->
-                    <div>
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item" style="margin-left: 70px; margin-right: 10px;">
-                                <a class="nav-link" href="<?php echo BASE_URL ?>nuevo"><h4><i class="bi bi-lightning-charge-fill me-2"></i>NUEVOS</h4></a>
-                            </li>
-                            <li class="nav-item" style="margin-left: 70px;">
-                                <a class="nav-link" href="<?php echo BASE_URL ?>kids"><h4><i class="bi bi-emoji-laughing-fill me-2"></i>KIDS</h4></a>
-                            </li>
-                            <li class="nav-item" style="margin-left: 70px;">
-                                <a class="nav-link" href="<?php echo BASE_URL ?>hombres"><h4><i class="bi bi-person-arms-up me-2"></i>HOMBRES</h4></a>
-                            </li>
-                            <li class="nav-item" style="margin-left: 70px;">
-                                <a class="nav-link" href="<?php echo BASE_URL ?>kids"><h4><i class="bi bi-gender-female me-2"></i>MUJERES</h4></a>
-                            </li>
-                            <button type="button" class="me-2 btn btn-outline-light"> <i class="bi bi-person-fill"></i> <?php echo $_SESSION['sesion_ventas_nombres'];?></button>
-                            <button type="button" class="me-2 btn btn-outline-light" onclick="cerrar_sesion();"><i class="bi bi-box-arrow-right"></i> Salir</button>
-                        </ul>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars" style="color: var(--color-acento); font-size: 1.5rem;"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo BASE_URL ?>nuevo">
+                                <i class="fas fa-fire nav-icon"></i>Nuevos Drops
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo BASE_URL ?>kids">
+                                <i class="fas fa-child-reaching nav-icon"></i>Street Kids
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo BASE_URL ?>hombres">
+                                <i class="fas fa-person nav-icon"></i>Urban Men
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo BASE_URL ?>mujeres">
+                                <i class="fas fa-person-dress nav-icon"></i>Hype Women
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center">
+                        <form class="d-flex me-3" role="search">
+                            <input class="form-control search-box me-2" type="search" placeholder="BUSCAR STYLES..." aria-label="Search">
+                            <button class="btn btn-street" type="submit">
+                                <i class="fas fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+
+                        <div class="d-flex align-items-center">
+                            <a href="<?php echo BASE_URL ?>login" class="icon-wrapper text-white me-3" title="Mi Perfil">
+                                <i class="fas fa-user-astronaut fa-2x nav-icon"></i>
+                            </a>
+                            
+                            <a href="<?php echo BASE_URL ?>carrito" class="icon-wrapper text-white position-relative" title="Carrito">
+                                <i class="fas fa-bag-shopping fa-2x nav-icon"></i>
+                                <span class="cart-badge">3</span>
+                            </a>
+                            
+                            <div class="ms-4 d-flex align-items-center">
+                                <button class="btn btn-street-outline me-2">
+                                    <i class="fas fa-user me-1"></i> <?php echo $_SESSION['sesion_ventas_nombres'];?>
+                                </button>
+                                <button class="btn btn-street" onclick="cerrar_sesion();">
+                                    <i class="fas fa-right-from-bracket me-1"></i> Salir
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <!-- FIN BARRA DE TAREAS -->
-
-                    <form class="d-flex" style="margin-right: 40px; margin-left: 40px;" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
-
-                        <a href="<?php echo BASE_URL ?>login" class="ms-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                            </svg>
-                        </a>
-                        
-                        <a id="iconocar" href="<?php echo BASE_URL ?>carrito" class="ms-3" data-count="3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                            </svg>
-                        </a>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -240,6 +337,8 @@
         <script>
             const base_url = '<?php echo BASE_URL; ?>';
         </script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </div>
 </body>
 </html>
