@@ -3,7 +3,7 @@
   <div class="footer-actions">
     <a href="<?php echo BASE_URL; ?>contacto" class="action-btn">
       <i class="fas fa-comment-dots"></i>
-      <span>Chat</span>
+      <span>Contactanos</span>
     </a>
     <a href="<?php echo BASE_URL; ?>perfil" class="action-btn">
       <i class="fas fa-user-ninja"></i>
@@ -11,11 +11,11 @@
     </a>
     <a href="<?php echo BASE_URL; ?>sobre-nosotros" class="action-btn">
       <i class="fas fa-robot"></i>
-      <span>Team</span>
+      <span>Nosotros</span>
     </a>
     <a href="<?php echo BASE_URL; ?>faq" class="action-btn">
       <i class="fas fa-question-circle"></i>
-      <span>FAQ</span>
+      
     </a>
   </div>
 
@@ -68,7 +68,7 @@
 
   <!-- Copyright con estilo moderno -->
   <div class="footer-copy">
-    <p>© 2024 NombreEmpresa | <span>Made with <i class="fas fa-heart"></i> for digital creators</span></p>
+    <p>© 2024 Mendoza | <span>Made with <i class="fas fa-heart"></i></span></p>
   </div>
 </div>
 
