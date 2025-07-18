@@ -75,7 +75,7 @@
 
       <div class="text-right mt-4">
         <button class="btn btn-primary" onclick="window.print()">Imprimir</button>
-        <a href="<?php echo BASE_URL ?>producto" class="btn btn-secondary">Volver a comprar productos</a>
+        <a href="<?php echo BASE_URL ?>inicio" class="btn btn-secondary">Volver a comprar productos</a>
       </div>
 
       <hr>
