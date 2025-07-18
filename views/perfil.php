@@ -74,7 +74,7 @@
         <div class="row">
             <div class="col-md-3 profile-sidebar">
                 <div class="text-center">
-                    <img src="logo.png" class="img-fluid rounded-circle" style="background-color: rgb(189, 189, 119); width: 100px;height: 100px;" alt="Perfil">
+                    <img src="https://scontent.fjau2-1.fna.fbcdn.net/v/t39.30808-6/300385728_447204950756462_3959348509403535760_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=EkjG14nc4GEQ7kNvwGAF_Zf&_nc_oc=Adlmrj6eIi-Ye2uQJTIsvhMTutPONj0KDLfrrAsNoMihIt7nHijqVfCz9BEaAag1SbA&_nc_zt=23&_nc_ht=scontent.fjau2-1.fna&_nc_gid=cw7eyn_kYa1CSsdSmpg_9g&oh=00_AfR7EIjmicZOw773dKF-_emkITj5AP4yIo97nDAk0cIXMQ&oe=68802274" class="img-fluid rounded-circle" style="background-color: rgb(189, 189, 119); width: 100px;height: 100px;" alt="Perfil">
                     <h3>Perfil</h3>
                 </div>
                 <ul>
